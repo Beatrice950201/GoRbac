@@ -1,13 +1,19 @@
 # GoRbac
 基于Beego的RBAC权限管理系统
+
 ##### 运行
 
 ``` bash
-git clone https://github.com/Beatrice950201/GoRbac.git
+
+# git clone https://github.com/Beatrice950201/GoRbac.git
+
 # 其他一切流程请参考Beego框架
+
 ```
 
 ##### 体验
+
+``` bash
 
 # 测试账号：beatrice950201
 
