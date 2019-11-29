@@ -1,0 +1,46 @@
+<main id="main-container">
+    <!-- Hero -->
+    {{template "admin/common/breadcrumb.html" .}}
+    <!-- END Hero -->
+    <!-- Page Content -->
+    <div class="content" style="max-width: initial;padding-top: 12px;">
+        <div class="alert alert-warning alert-dismissable" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            <p class="mb-0" style="font-size: 0.9rem;color: #efa231;">
+                <strong><i class="fa fa-fw fa-info-circle"></i> 提示：</strong>按住表头可拖动节点，调整后将自动生效。
+            </p>
+        </div>
+        <!-- Full Table -->
+        <div class="block">
+            <ul class="nav nav-tabs nav-tabs-block">
+                {{range $i, $e := .groupMenu}}
+                    <li class="nav-item">
+                        <a class="nav-link {{if eq $.groupMenuCurrentId $e.Id }} active {{end}}" href='{{urlfor "MenuController.Index" "id" $e.Id}}'>{{$e.Title}}</a>
+                    </li>
+                {{end}}
+            </ul>
+            <div class="block-content tab-content">
+                <div class="tab-pane active">
+                    <div class="row data-table-toolbar">
+                        <div class="col-sm-12">
+                            <div class="toolbar-btn-action">
+                                <a title="新增节点" class="btn btn-square btn-primary" href='{{urlfor "MenuController.Create" "root" $.groupMenuCurrentId "id" $.groupMenuCurrentId}}'><i class="fa fa-plus-circle"></i> 新增节点</a>
+                                <a title="展开节点" class="btn btn-square btn-success expand_all" href="javascript:void(0);"><i class="fa fa-plus"></i> 展开节点</a>
+                                <a title="收起节点" class="btn btn-square btn-warning collapse_all" href="javascript:void(0);"><i class="fa fa-minus"></i> 收起节点</a>
+                           </div>
+                        </div>
+                    </div>
+                    <div class="table-responsive dd" id="menu_list" data-root="{{$.groupMenuCurrentId}}" data-action='{{urlfor "MenuController.Save"}}'>
+                        <ol class="dd-list">
+                            {{str2html $.menus}}
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- END Full Table -->
+    </div>
+    <!-- END Page Content -->
+</main>

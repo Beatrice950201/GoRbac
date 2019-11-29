@@ -1,0 +1,128 @@
+<link href="/static/admin/js/plugins/webuploader/webuploader.css" rel="stylesheet" />
+<style>
+    .js-upload-image{
+        height: 43px;
+    }
+    .js-upload-image label{
+        padding: 0;
+    }
+    .js-upload-image_bs{
+        overflow: hidden;
+        padding: 3px 0;
+    }
+    .js-upload-image_bs img{
+        width: 115px;
+        height: 115px;
+        display: block;
+        float: left;
+        margin: 5px;
+    }
+    .js-upload-image_bs img:nth-child(1){
+        margin-left: 0;
+    }
+</style>
+<script src="/static/admin/js/plugins/ckeditor4/ckeditor.js"></script>
+<script src="/static/admin/js/plugins/ckeditor4/lang/zh-cn.js"></script>
+
+<script src="/static/admin/js/plugins/bootstrap-notify/bootstrap-notify.min.js"></script>
+<script src="/static/admin/js/plugins/webuploader/webuploader.min.js"></script>
+<script>
+    $(document).ready(function() {
+        const uploader = WebUploader.create({
+            auto: true,
+            swf: '/static/js/plugins/webuploader/Uploader.swf',
+            server: '{{urlfor "SignController.Uploader"}}',
+            pick: '.js-upload-image',
+            accept: {
+                title: 'Images',
+                extensions: 'gif,jpg,jpeg,png',
+                mimeTypes: 'image/*'
+            }
+        });
+        // 上传过程
+        uploader.on( 'uploadProgress', function() {
+            One.loader('show');
+        });
+        // 上传成功
+        uploader.on( 'uploadSuccess', function( file,res ) {
+            One.loader('hide');
+            let type = "danger";
+            if(res && res.status === true){
+                $(".js-upload-image_bs").html('<img src="/'+res.data+'"/><input type="hidden" name="covers" value="'+res.data+'">');
+                type = "success";
+            }
+            One.helpers('notify', {align: 'center',type: type, icon: 'fa fa-check mr-1', message: res.message});
+        });
+        // 上传失败
+        uploader.on( 'uploadError', function() {
+            One.loader('hide');
+            One.helpers('notify', {align: 'center',type: "danger", icon: 'fa fa-check mr-1', message: "文件上传失败,请稍后再试.."});
+        });
+
+
+        CKEDITOR.replace( 'js-ckeditor',{
+            language : 'zh-cn',
+            height: 500,
+            allowedContent: true,
+            fillEmptyBlocks:false,
+            autoParagraph:false,
+            enterMode:CKEDITOR.ENTER_BR,
+            shiftEnterMode :CKEDITOR.ENTER_P,
+            fontSize_sizes:'8/8px;9/9px;10/10px;11/11px;12/12px;14/14px;15/15px;16/16px;18/18px;20/20px;22/22px;24/24px;26/26px;28/28px;36/36px;48/48px;72/72px'
+        });
+        CKEDITOR.on( 'instanceReady', function( ev ){
+            with (ev.editor.dataProcessor.writer) {
+                setRules("p",  {indent : false, breakBeforeOpen : false, breakAfterOpen : false, breakBeforeClose : false, breakAfterClose : false} );
+                setRules("h1", {indent : false, breakBeforeOpen : false, breakAfterOpen : false, breakBeforeClose : false, breakAfterClose : false} );
+                setRules("h2", {indent : false, breakBeforeOpen : false, breakAfterOpen : false, breakBeforeClose : false, breakAfterClose : false} );
+                setRules("h3", {indent : false, breakBeforeOpen : false, breakAfterOpen : false, breakBeforeClose : false, breakAfterClose : false} );
+                setRules("h4", {indent : false, breakBeforeOpen : false, breakAfterOpen : false, breakBeforeClose : false, breakAfterClose : false} );
+                setRules("h5", {indent : false, breakBeforeOpen : false, breakAfterOpen : false, breakBeforeClose : false, breakAfterClose : false} );
+                setRules("p", {indent : false, breakBeforeOpen : false, breakAfterOpen : false, breakBeforeClose : false, breakAfterClose : false} );
+                setRules("table", {indent : false, breakBeforeOpen : false, breakAfterOpen : false, breakBeforeClose : false, breakAfterClose : false} );
+                setRules("tr", {indent : false, breakBeforeOpen : false, breakAfterOpen : false, breakBeforeClose : false, breakAfterClose : false} );
+                setRules("td", {indent : false, breakBeforeOpen : false, breakAfterOpen : false, breakBeforeClose : false, breakAfterClose : false} );
+                setRules("iframe", {indent : false, breakBeforeOpen : false, breakAfterOpen : false, breakBeforeClose : false, breakAfterClose : false} );
+                setRules("li", {indent : false, breakBeforeOpen : false, breakAfterOpen : false, breakBeforeClose : false, breakAfterClose : false} );
+                setRules("ul", {indent : false, breakBeforeOpen : false, breakAfterOpen : false, breakBeforeClose : false, breakAfterClose : false} );
+                setRules("ol", {indent : false, breakBeforeOpen : false, breakAfterOpen : false, breakBeforeClose : false, breakAfterClose : false} );
+                setRules("section", {indent : false, breakBeforeOpen : false, breakAfterOpen : false, breakBeforeClose : false, breakAfterClose : false} );
+            }
+        });
+
+
+        $(".ajax_from").submit(function () {
+            for(instance in CKEDITOR.instances ){
+                CKEDITOR.instances[instance].updateElement();
+            }
+            let form_data = $(this).serialize();
+            app.post($(this).attr("action"),form_data);
+            return false
+        });
+        $(".gather_submit").click(function () {
+           let value = $("#gather_url").val();
+            app.post($(this).data("action"),{"url":value},function (res) {
+                if(res && res.status === true){
+                    $("input[ name='title']").val(res.data["title"]);
+                    $("textarea[ name='description']").val(res.data["description"]);
+                    for(instance in CKEDITOR.instances ){
+                        CKEDITOR.instances[instance].setData(res.data["content"]);
+                    }
+                    if(res.data["covers"]){
+                        $(".js-upload-image_bs").html('<img src="/'+res.data["covers"]+'"/><input type="hidden" name="covers" value="'+res.data["covers"]+'">');
+                    }
+                }
+                jQuery('#modal_gather').modal('hide');
+                One.helpers('notify', {align: 'center',type: (res.status === true) ? "success" :"danger", icon: 'fa fa-check mr-1', message: res.message});
+            });
+        });
+        $("#modal_preview_click").click(function () {
+            var content;
+            for(instance in CKEDITOR.instances ){
+                content = CKEDITOR.instances[instance].getData();
+            }
+            $("#modal_preview_content").html(content);
+            jQuery('#modal_preview').modal('show');
+        });
+    });
+</script>

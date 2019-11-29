@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="zh">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0,viewport-fit=cover">
+    <title>{{config "String" "web_name" ""}} - 管理中心</title>
+    <meta name="description" content='{{config "String" "web_name" ""}} - 管理中心'>
+    <meta name="robots" content="noindex, nofollow">
+    <!-- Icons -->
+    <link rel="shortcut icon" href="/static/admin/media/favicons/favicon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/static/admin/media/favicons/favicon-192x192.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/static/admin/media/favicons/apple-touch-icon-180x180.png">
+    <!-- END Icons -->
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400italic,600,700%7COpen+Sans:300,400,400italic,600,700">
+    <link rel="stylesheet" id="css-main" href="/static/admin/css/oneui.min.css">
+    <link rel="stylesheet" href="/static/admin/css/appCore.css">
+    <!-- END Stylesheets -->
+    <!-- Page css Plugins -->
+    <link rel="stylesheet" href="/static/admin/js/plugins/sweet-alert/css/sweet-alert.css">
+    <!-- Page css Plugins -->
+    {{.HtmlHead}}
+</head>
+<body>
+<div id="page-loader" class="hide"></div>
+<div id="page-container" class="sidebar-o sidebar-dark enable-page-overlay side-scroll page-header-fixed">
+    <!-- Side Overlay-->
+    {{template "admin/common/aside.html" .}}
+    <!-- END Side Overlay -->
+    <!-- Sidebar -->
+    {{template "admin/common/sidebar.html" .}}
+    <!-- END Sidebar -->
+    <!-- Header -->
+    {{template "admin/common/header.html" .}}
+    <!-- END Header -->
+    <!-- Main Container -->
+    {{.LayoutContent}}
+    <!-- END Main Container -->
+    <!-- Footer -->
+    {{template "admin/common/footer.html" .}}
+    <!-- END Footer -->
+</div>
+<!-- END Page Container -->
+<script src="/static/admin/js/core/jquery.min.js"></script>
+<script src="/static/admin/js/plugins/sweet-alert/js/sweet-alert.min.js"></script>
+<script src="/static/admin/js/oneui.core.min.js"></script>
+<script src="/static/admin/js/oneui.app.min.js"></script>
+<script src="/static/admin/js/app_core.js"></script>
+{{.Scripts}}
+</body>
+</html>

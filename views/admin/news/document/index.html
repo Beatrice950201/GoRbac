@@ -1,0 +1,115 @@
+<main id="main-container">
+    <!-- Hero -->
+    {{template "admin/common/breadcrumb.html" .}}
+    <!-- END Hero -->
+    <!-- Page Content -->
+    <div class="content" style="max-width: initial;">
+        <!-- Full Table -->
+        <div class="block">
+            <div class="block-header bg-gray-lighter">
+                <h3 class="block-title">文章管理</h3>
+                <div class="block-options">
+                    <button type="button" class="btn-block-option" data-toggle="block-option" data-action="fullscreen_toggle">
+                        <i class="si si-size-fullscreen"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="block-content tab-content">
+                <div class="tab-pane active">
+                    <div class="row data-table-toolbar">
+                        <div class="col-sm-12">
+                            <div class="toolbar-btn-action">
+                                <a title="创建文章" class="btn btn-square btn-primary" href='{{urlfor "NewsDocument.Create"}}'>
+                                    <i class="fa fa-plus-circle"></i> 创建文章
+                                </a>
+                                <a title="删除文章" class="btn btn-square btn-danger ajax_deletes" data-action='{{urlfor "NewsDocument.Delete"}}' href="javascript:void(0);">
+                                    <i class="fa fa-times-circle"></i> 删除文章
+                                </a>
+                                <div class="dropdown" style="display: inline;">
+                                    <button type="button" class="btn btn-info dropdown-toggle" id="dropdown-default-info" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">分类筛选</button>
+                                    <div class="dropdown-menu font-size-sm" aria-labelledby="dropdown-default-info">
+                                        <a class="dropdown-item" href="{{urlfor "NewsDocument.Index"}}">展示全部</a>
+                                        {{range $i, $e := .cate}}
+                                           <a class="dropdown-item" href="{{urlfor "NewsDocument.Index" "cid" $e.Id }}">{{$e.Title}}</a>
+                                        {{end}}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-striped table-vcenter font-size-sm">
+                            <thead>
+                            <tr>
+                                <th class="text-center">
+                                    <div class="custom-control custom-checkbox d-inline-block">
+                                        <input type="checkbox" class="custom-control-input" id="checkAll" name="check[]">
+                                        <label class="custom-control-label" for="checkAll"></label>
+                                    </div>
+                                </th>
+                                <th class="text-center">ID</th>
+                                <th class="text-center">发布用户</th>
+                                <th class="text-center">文档标题</th>
+                                <th class="text-center">所属分类</th>
+                                <th class="text-center">文档类型</th>
+{{/*                                <th class="text-center">预览数量</th>*/}}
+{{/*                                <th class="text-center">点赞数量</th>*/}}
+{{/*                                <th class="text-center">转载数量</th>*/}}
+                                <th class="text-center">更新时间</th>
+                                <th class="text-center">置顶序号</th>
+                                <th class="text-center">文档状态</th>
+                                <th class="text-center">操作</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            {{range $i, $e := .Page.List}}
+                                <tr>
+                                    <td class="text-center">
+                                        <div class="custom-control custom-checkbox d-inline-block">
+                                            <input type="checkbox" class="custom-control-input checkList" value="{{$e.Id}}" id="check_{{$e.Id}}" name="check[]">
+                                            <label class="custom-control-label" for="check_{{$e.Id}}"></label>
+                                        </div>
+                                    </td>
+                                    <td class="text-center">{{$e.Id}}</td>
+                                    <td class="text-center">{{$e.Nickname}}</td>
+                                    <td class="text-center">{{$e.Title}}</td>
+                                    <td class="text-center">{{$e.CategoryName}}</td>
+                                    <td class="text-center">
+                                        <a class="label label-danger" href="javascript:void(0)">
+                                            {{if eq 1 $e.IsVideo }} 视频 {{else}} 文章 {{end}}
+                                        </a>
+                                    </td>
+{{/*                                    <td class="text-center">{{$e.View}}</td>*/}}
+{{/*                                    <td class="text-center">{{$e.Goods}}</td>*/}}
+{{/*                                    <td class="text-center">{{$e.Quote}}</td>*/}}
+                                    <td class="text-center">{{date $e.CreateTime "Y-m-d"}}</td>
+                                    <td class="text-center">{{$e.Sort}}</td>
+                                    <td class="text-center">
+                                        <div class="custom-control custom-switch mb-1">
+                                            <input type="checkbox" class="custom-control-input switch_status" data-action='{{urlfor "NewsDocument.Status"}}' data-ids="{{$e.Id}}" id="status_{{$e.Id}}" name="status" {{if eq $e.Status 1 }} checked {{end}}>
+                                            <label class="custom-control-label" for="status_{{$e.Id}}"></label>
+                                        </div>
+                                    </td>
+                                    <td class="text-center">
+                                        <div class="btn-group btn-group-sm">
+                                            <a class="btn btn-outline-secondary" href='{{urlfor "NewsDocument.Edit" "id" $e.Id}}' data-toggle="tooltip" data-original-title="编辑">
+                                                <i class="fa fa-pencil-alt"></i>
+                                            </a>
+                                            <a class="btn btn-outline-secondary ajax_delete" data-action='{{urlfor "NewsDocument.Delete"}}' data-ids="{{$e.Id}}" href="javascript:void(0);" data-toggle="tooltip" data-original-title="删除">
+                                                <i class="fa fa-times"></i>
+                                            </a>
+                                        </div>
+                                    </td>
+                                </tr>
+                            {{end}}
+                            </tbody>
+                        </table>
+                        <ul class="pagination" style="justify-content: center!important;"></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- END Full Table -->
+    </div>
+    <!-- END Page Content -->
+</main>

@@ -1,0 +1,9 @@
+<script>
+    $(document).ready(function() {
+        $(".ajax_from").submit(function () {
+            let form_data = $(this).serialize();
+            app.post($(this).attr("action"),form_data);
+            return false
+        })
+    });
+</script>

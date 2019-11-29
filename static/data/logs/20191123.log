@@ -1,0 +1,15 @@
+2019/11/23 14:48:23.403 [I] [parser.go:112]  generate router from comments
+2019/11/23 14:48:23.416 [I] [parser.go:112]  generate router from comments
+2019/11/23 14:48:23.429 [I] [parser.go:112]  generate router from comments
+2019/11/23 14:48:23.525 [I] [asm_amd64.s:1337]  http server Running on http://:8080
+2019/11/23 14:48:31.406 [I] [router.go:270]  D:\GO_PATH\src\github.com\beatrice950201\card\controllers\index no changed
+2019/11/23 14:48:31.408 [I] [router.go:270]  D:\GO_PATH\src\github.com\beatrice950201\card\controllers\admin no changed
+2019/11/23 14:48:31.411 [I] [router.go:270]  D:\GO_PATH\src\github.com\beatrice950201\card\controllers\admin\news no changed
+2019/11/23 14:48:35.190 [I] [router.go:270]  D:\GO_PATH\src\github.com\beatrice950201\card\controllers\index no changed
+2019/11/23 14:48:35.191 [I] [router.go:270]  D:\GO_PATH\src\github.com\beatrice950201\card\controllers\admin no changed
+2019/11/23 14:48:35.194 [I] [router.go:270]  D:\GO_PATH\src\github.com\beatrice950201\card\controllers\admin\news no changed
+2019/11/23 14:48:35.273 [I] [asm_amd64.s:1337]  http server Running on http://:8080
+2019/11/23 14:48:38.821 [I] [router.go:270]  D:\GO_PATH\src\github.com\beatrice950201\card\controllers\index no changed
+2019/11/23 14:48:38.822 [I] [router.go:270]  D:\GO_PATH\src\github.com\beatrice950201\card\controllers\admin no changed
+2019/11/23 14:48:38.825 [I] [router.go:270]  D:\GO_PATH\src\github.com\beatrice950201\card\controllers\admin\news no changed
+2019/11/23 14:48:38.895 [I] [asm_amd64.s:1337]  http server Running on http://:8080

@@ -1,0 +1,231 @@
+<main id="main-container">
+    <!-- Hero -->
+    {{template "admin/common/breadcrumb.html" .}}
+    <!-- END Hero -->
+    <!-- Page Content -->
+    <div class="content font-size-sm" style="max-width: initial;">
+        <!-- Full Table -->
+        <div class="block">
+            <div class="block-header bg-gray-lighter">
+                <ul class="nav nav-tabs nav-tabs-block" data-toggle="tabs" role="tablist">
+                    <li class="nav-item"><a class="nav-link active" href="#doc_base">基本信息</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#doc_seo">文档内容</a></li>
+                </ul>
+                <div class="block-options">
+                    <button type="button" class="btn-block-option" data-toggle="tooltip" data-original-title="抓取公众号">
+                        <i data-toggle="modal" data-target="#modal_gather" class="fa fa-fw fa-plane-arrival"></i>
+                    </button>
+                    <button id="modal_preview_click" type="button" class="btn-block-option" data-toggle="tooltip" data-original-title="预览效果">
+                        <i class="fa fa-fw fa-eye"></i>
+                    </button>
+                    <button type="button" class="btn-block-option"  data-toggle="block-option" data-action="fullscreen_toggle">
+                        <i class="si si-size-fullscreen"></i>
+                    </button>
+                </div>
+            </div>
+            <form class="ajax_from" action='{{urlfor "NewsDocument.Edit"}}' method="post">
+                <div class="block-content tab-content">
+                    <div class="tab-pane fade fade-left show active font-size-sm" id="doc_base" role="tabpanel">
+                        <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <label class="col-xs-12">文章标题</label>
+                            <div class="col-xs-12">
+                                <input class="form-control" type="text" name="title" value="{{$.info.Title}}" placeholder="请输入文章标题">
+                                <div class="help-block">必填，请输入文章标题</div>
+                            </div>
+                        </div>
+                        <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <label class="col-xs-12">所属分类</label>
+                            <div class="col-xs-12">
+                                <select class="form-control" name="cid">
+                                    {{range $i, $e := .cate}}
+                                        <option {{if eq $.info.Cid $e.Id}} selected {{end}} value="{{$e.Id}}">{{$e.Title}}</option>
+                                    {{end}}
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <label class="col-xs-12">栏目描述</label>
+                            <div class="col-xs-12">
+                                <textarea class="form-control" name="description" rows="5" placeholder="请输入栏目描述..">{{$.info.Description}}</textarea>
+                            </div>
+                        </div>
+                        <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <label class="col-xs-12">上传封面图</label>
+                            <div class="col-xs-12">
+                                <button type="button" style="padding: 0;" class="btn btn-primary js-upload-image">
+                                    <i class="fa fa-fw fa-upload mr-1"></i> 选择文件
+                                </button>
+                                <div class="js-upload-image_bs">
+                                    {{if $.info.Covers }}
+                                        <img src="/{{$.info.Covers}}"/><input type="hidden" value="{{$.info.Covers}}">
+                                    {{end}}
+                                </div>
+                                <div class="help-block">请选择上传的文件,支持格式：.jpg，png</div>
+                            </div>
+                        </div>
+                        <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <label class="col-xs-12">文章类型</label>
+                            <div class="col-xs-12">
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" class="custom-control-input" value="0" id="is_video_0" name="is_video" {{if eq $.info.IsVideo 0}} checked {{end}}>
+                                    <label class="custom-control-label" for="is_video_0">文章</label>
+                                </div>
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" class="custom-control-input" value="1" id="is_video_1" name="is_video" {{if eq $.info.IsVideo 1}} checked {{end}}>
+                                    <label class="custom-control-label" for="is_video_1">视频</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group form-row col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="col-4 input-group">
+                                <div class="input-group-prepend"><span class="input-group-text" style="padding: 0.275rem .75rem;">浏览量</span></div>
+                                <input type="number" class="form-control" value="{{$.info.View}}" id="view" name="view">
+                            </div>
+                            <div class="col-4 input-group">
+                                <div class="input-group-prepend"><span class="input-group-text" style="padding: 0.275rem .75rem;">点赞量</span></div>
+                                <input type="number" class="form-control" value="{{$.info.Goods}}" id="goods" name="goods">
+                            </div>
+                            <div class="col-4 input-group">
+                                <div class="input-group-prepend"><span class="input-group-text" style="padding: 0.275rem .75rem;">转发量</span></div>
+                                <input type="number" class="form-control" value="{{$.info.Quote}}" id="quote" name="quote">
+                            </div>
+                        </div>
+                        <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <label class="col-xs-12">栏目状态</label>
+                            <div class="col-xs-12">
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" class="custom-control-input" value="0" id="status_0" name="status" {{if eq $.info.Status 0}} checked {{end}}>
+                                    <label class="custom-control-label" for="status_0">禁用</label>
+                                </div>
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" class="custom-control-input" value="1" id="status_1" name="status" {{if eq $.info.Status 1}} checked {{end}}>
+                                    <label class="custom-control-label" for="status_1">启用</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <label class="col-xs-12">排序</label>
+                            <div class="col-xs-12">
+                                <input class="form-control" type="number" value="{{$.info.Sort}}" name="sort" placeholder="请输入排序数字"/>
+                                <div class="help-block">数值越大越靠前</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade fade-left font-size-sm" id="doc_seo" role="tabpanel">
+                        <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <label class="col-xs-12">文章详情</label>
+                            <div class="col-xs-12">
+                                <textarea id="js-ckeditor" class="form-control" name="content" rows="5" placeholder="请输入文章详情..">{{$.info.Content}}</textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col-md-12 col-xs-12" style="padding-bottom: 20px;">
+                    <div class="col-xs-12 align-text-center">
+                        <input name="id" type="hidden" value="{{$.info.Id}}">
+                        <button class="btn btn-info" type="submit">提交</button>
+                        <button class="btn btn-secondary" type="button" onclick="javascript:history.back(-1);return false;">返回</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <!-- END Full Table -->
+    </div>
+    <!-- END Page Content -->
+</main>
+
+<div class="modal fade font-size-sm" id="modal_gather" tabindex="-1" role="dialog" aria-labelledby="modal_gather" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-popin modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="block block-themed block-transparent mb-0">
+                <div class="block-header bg-primary-dark">
+                    <h3 class="block-title">URL抓取</h3>
+                    <div class="block-options">
+                        <button type="button" class="btn-block-option" data-dismiss="modal" aria-label="Close">
+                            <i class="fa fa-fw fa-times"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="block-content font-size-sm">
+                    <div class="form-group">
+                        <div class="input-group">
+                            <div class="input-group-prepend"><span class="input-group-text" style="padding: 0.275rem .75rem;">检索源地址</span></div>
+                            <input type="text" class="form-control" id="gather_url">
+                        </div>
+                    </div>
+                </div>
+                <div class="block-content block-content-full text-right border-top">
+                    <button type="button" class="btn btn-sm btn-primary gather_submit" data-action="{{urlfor "NewsDocument.Gather"}}">采集</button>
+                    <button type="button" class="btn btn-sm btn-primary" data-dismiss="modal">关闭</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<style>
+    .block-content p {
+        margin-bottom: 0;
+    }
+    #modal_preview_content img{
+        max-width: 100%;
+    }
+    .rich_media_content * {
+        margin: 0;
+        padding: 0
+    }
+    .rich_media_content {
+        -ms-text-size-adjust: 100%;
+        -webkit-text-size-adjust: 100%;
+        line-height: 1.6
+    }
+    .rich_media_content {
+        -webkit-touch-callout: none;
+        font-family: -apple-system-font,BlinkMacSystemFont,"Helvetica Neue","PingFang SC","Hiragino Sans GB","Microsoft YaHei UI","Microsoft YaHei",Arial,sans-serif;
+        color: #333;
+        letter-spacing: .034em
+    }
+    .rich_media_content {
+        overflow: hidden;
+        color: #333;
+        font-size: 17px;
+        word-wrap: break-word;
+        -webkit-hyphens: auto;
+        -ms-hyphens: auto;
+        hyphens: auto;
+        text-align: justify;
+        position: relative;
+        z-index: 0
+    }
+    .rich_media_content * {
+        max-width: 100%!important;
+        box-sizing: border-box!important;
+        -webkit-box-sizing: border-box!important;
+        word-wrap: break-word!important
+    }
+    .rich_media_content p{
+        clear: both;
+        min-height: 1em;
+    }
+</style>
+<div class="modal fade font-size-sm" id="modal_preview" tabindex="-1" role="dialog" aria-labelledby="modal_preview" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-popin modal-dialog-centered" role="document" style="max-width: 450px;">
+        <div class="modal-content">
+            <div class="block block-themed block-transparent mb-0">
+                <div class="block-header bg-primary-dark">
+                    <h3 class="block-title">效果预览</h3>
+                    <div class="block-options">
+                        <button type="button" class="btn-block-option" data-dismiss="modal" aria-label="Close">
+                            <i class="fa fa-fw fa-times"></i>
+                        </button>
+                    </div>
+                </div>
+                <div  class="block-content font-size-sm rich_media_content" id="modal_preview_content" style="height: 600px;overflow-y: scroll;width: 450px;overflow-x: hidden"></div>
+                <div class="block-content block-content-full text-center border-top">
+                    <button type="button" class="btn btn-sm btn-primary" data-dismiss="modal">关闭预览</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

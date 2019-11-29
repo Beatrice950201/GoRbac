@@ -1,0 +1,132 @@
+<main id="main-container">
+    <!-- Hero -->
+    {{template "admin/common/breadcrumb.html" .}}
+    <!-- END Hero -->
+    <!-- Page Content -->
+    <div class="content" style="max-width: initial;">
+        <!-- Full Table -->
+        <div class="block">
+            <div class="block-header bg-gray-lighter">
+                <h3 class="block-title">创建节点</h3>
+                <div class="block-options">
+                    <button type="button" class="btn-block-option" data-toggle="block-option" data-action="fullscreen_toggle">
+                        <i class="si si-size-fullscreen"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="block-content">
+                <form class="row ajax_from" action='{{urlfor "MenuController.Create"}}' method="post">
+                    <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <label class="col-xs-12">所属模块</label>
+                        <div class="col-xs-12">
+                            <select class="form-control" data-active="{{$.pid}}" data-action='{{urlfor "MenuController.ChildTree"}}' id="module">
+                                <option value="0">顶级模块</option>
+                                {{range $i, $e := .groupMenu}}
+                                  <option {{if eq $.root $e.Id }}selected{{end}} value="{{$e.Id}}">{{$e.Title}}</option>
+                                {{end}}
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <label class="col-xs-12">所属节点</label>
+                        <div class="col-xs-12">
+                            <select class="form-control" name="pid" id="module_html"><!--jsadd--></select>
+                            <div class="help-block">所属上级节点</div>
+                        </div>
+                    </div>
+                    <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <label class="col-xs-12">节点标题</label>
+                        <div class="col-xs-12">
+                            <input class="form-control" type="text" name="title" placeholder="请输入节点标题"/>
+                        </div>
+                    </div>
+                    <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <label class="col-xs-12">链接类型</label>
+                        <div class="col-xs-12">
+                            <div class="custom-control custom-radio custom-control-inline custom-control-inline">
+                                <input type="radio" value="module_admin" class="custom-control-input" id="url_type" name="url_type" checked>
+                                <label class="custom-control-label" for="url_type">模块连接</label>
+                            </div>
+
+                            <div class="custom-control custom-radio custom-control-inline custom-control-inline">
+                                <input type="radio" value="module_admin" class="custom-control-input" id="url_type1" name="url_type">
+                                <label class="custom-control-label" for="url_type1">外部链接</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <label class="col-xs-12">节点连接</label>
+                        <div class="col-xs-12">
+                            <input class="form-control" type="text" name="url_value" placeholder="请输入节点连接"/>
+                            <div class="help-block">
+                                可留空，如果是模块链接，请填写
+                                <code>控制器.方法名</code>，
+                                如：<code>IndexController.Index</code>。
+                                如果是普通链接，则直接填写url地址，如：<code>
+                                http://www.eibk.com</code>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <label class="col-xs-12">附加参数</label>
+                        <div class="col-xs-12">
+                            <input class="form-control" type="text" name="params" placeholder="请输入附加参数"/>
+                            <div class="help-block">如：a=1&b=2</div>
+                        </div>
+                    </div>
+                    <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <label class="col-xs-12">节点图标</label>
+                        <div class="col-xs-12">
+                            <input class="form-control" type="text" name="icon" placeholder="请输入节点图标"/>
+                            <div class="help-block">如：fa fa-fw fa-github-<code>square</code></div>
+                        </div>
+                    </div>
+{{/*                    <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">*/}}
+{{/*                        <label class="col-xs-12">子系统节点</label>*/}}
+{{/*                        <div class="col-xs-12">*/}}
+{{/*                            <div class="custom-control custom-radio custom-control-inline custom-control-inline">*/}}
+{{/*                                <input type="radio" value="1" class="custom-control-input" id="online_hide" name="online_hide" checked>*/}}
+{{/*                                <label class="custom-control-label" for="online_hide">是</label>*/}}
+{{/*                            </div>*/}}
+
+{{/*                            <div class="custom-control custom-radio custom-control-inline custom-control-inline">*/}}
+{{/*                                <input type="radio" value="0" class="custom-control-input" id="online_hide1" name="online_hide">*/}}
+{{/*                                <label class="custom-control-label" for="online_hide1">否</label>*/}}
+{{/*                            </div>*/}}
+{{/*                            <div class="help-block">子系统节点，将不会显示主系统</div>*/}}
+{{/*                        </div>*/}}
+{{/*                    </div>*/}}
+                    <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <label class="col-xs-12">是否左侧菜单</label>
+                        <div class="col-xs-12">
+                            <div class="custom-control custom-radio custom-control-inline custom-control-inline">
+                                <input type="radio" value="1" class="custom-control-input" id="is_menu" name="is_menu" checked>
+                                <label class="custom-control-label" for="is_menu">是</label>
+                            </div>
+                            <div class="custom-control custom-radio custom-control-inline custom-control-inline">
+                                <input type="radio" value="0" class="custom-control-input" id="is_menu1" name="is_menu">
+                                <label class="custom-control-label" for="is_menu1">否</label>
+                            </div>
+                            <div class="help-block">是否左侧菜单？</div>
+                        </div>
+                    </div>
+                    <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <label class="col-xs-12">排序</label>
+                        <div class="col-xs-12">
+                            <input class="form-control" type="number" name="sort" placeholder="请输入排序数字"/>
+                            <div class="help-block">数值越大越靠前</div>
+                        </div>
+                    </div>
+                    <div class="form-group col-md-12 col-xs-12">
+                        <div class="col-xs-12 align-text-center">
+                            <button class="btn btn-info" type="submit">提交</button>
+                            <button class="btn btn-secondary" type="button" onclick="javascript:history.back(-1);return false;">返回</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- END Full Table -->
+    </div>
+    <!-- END Page Content -->
+</main>

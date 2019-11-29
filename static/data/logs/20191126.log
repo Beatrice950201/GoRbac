@@ -1,0 +1,163 @@
+2019/11/26 17:11:34.181 [I] [parser.go:112]  generate router from comments
+2019/11/26 17:11:34.196 [I] [parser.go:112]  generate router from comments
+2019/11/26 17:11:34.210 [I] [parser.go:112]  generate router from comments
+2019/11/26 17:11:34.603 [I] [asm_amd64.s:1337]  http server Running on http://:8080
+2019/11/26 17:11:34.833 [I] [router.go:270]  D:\GO_PATH\src\github.com\beatrice950201\card\controllers\index no changed
+2019/11/26 17:11:34.834 [I] [router.go:270]  D:\GO_PATH\src\github.com\beatrice950201\card\controllers\admin no changed
+2019/11/26 17:11:34.836 [I] [router.go:270]  D:\GO_PATH\src\github.com\beatrice950201\card\controllers\admin\news no changed
+2019/11/26 17:11:34.927 [I] [asm_amd64.s:1337]  http server Running on http://:8080
+2019/11/26 17:11:35.701 [I] [router.go:270]  D:\GO_PATH\src\github.com\beatrice950201\card\controllers\index no changed
+2019/11/26 17:11:35.702 [I] [router.go:270]  D:\GO_PATH\src\github.com\beatrice950201\card\controllers\admin no changed
+2019/11/26 17:11:35.704 [I] [router.go:270]  D:\GO_PATH\src\github.com\beatrice950201\card\controllers\admin\news no changed
+2019/11/26 17:11:35.773 [I] [asm_amd64.s:1337]  http server Running on http://:8080
+2019/11/26 17:11:35.882 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|      7.995ms|   match|[44m GET     [0m /admin/sign/login   r:/admin/sign/login
+2019/11/26 17:11:35.948 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|    11.9936ms|   match|[44m GET     [0m /static/admin/css/oneui.min.css
+2019/11/26 17:11:35.955 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|    15.9905ms|   match|[44m GET     [0m /static/admin/css/appCore.css
+2019/11/26 17:11:35.985 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|    31.9815ms|   match|[44m GET     [0m /static/admin/js/oneui.app.min.js
+2019/11/26 17:11:35.993 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|    54.9693ms|   match|[44m GET     [0m /static/admin/js/plugins/sweet-alert/css/sweet-alert.css
+2019/11/26 17:11:36.067 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|   127.9256ms|   match|[44m GET     [0m /static/admin/js/core/jquery.min.js
+2019/11/26 17:11:36.091 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|   133.9233ms|   match|[44m GET     [0m /static/admin/js/plugins/jquery-validation/jquery.validate.min.js
+2019/11/26 17:11:36.120 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|   132.9275ms|   match|[44m GET     [0m /static/admin/js/plugins/sweet-alert/js/sweet-alert.min.js
+2019/11/26 17:11:36.136 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|   140.9181ms|   match|[44m GET     [0m /static/admin/js/app_core.js
+2019/11/26 17:11:36.144 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|    74.9563ms|   match|[44m GET     [0m /static/admin/js/pages/sign_login.js
+2019/11/26 17:11:36.186 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|    91.9466ms|   match|[44m GET     [0m /static/admin/fonts/fontawesome/fa-solid-900.woff2
+2019/11/26 17:11:36.612 [I] [router.go:270]  D:\GO_PATH\src\github.com\beatrice950201\card\controllers\index no changed
+2019/11/26 17:11:36.613 [I] [router.go:270]  D:\GO_PATH\src\github.com\beatrice950201\card\controllers\admin no changed
+2019/11/26 17:11:36.615 [I] [router.go:270]  D:\GO_PATH\src\github.com\beatrice950201\card\controllers\admin\news no changed
+2019/11/26 17:11:36.684 [I] [asm_amd64.s:1337]  http server Running on http://:8080
+2019/11/26 17:11:37.441 [I] [router.go:270]  D:\GO_PATH\src\github.com\beatrice950201\card\controllers\index no changed
+2019/11/26 17:11:37.442 [I] [router.go:270]  D:\GO_PATH\src\github.com\beatrice950201\card\controllers\admin no changed
+2019/11/26 17:11:37.444 [I] [router.go:270]  D:\GO_PATH\src\github.com\beatrice950201\card\controllers\admin\news no changed
+2019/11/26 17:11:37.518 [I] [asm_amd64.s:1337]  http server Running on http://:8080
+2019/11/26 17:11:38.272 [I] [router.go:270]  D:\GO_PATH\src\github.com\beatrice950201\card\controllers\index no changed
+2019/11/26 17:11:38.273 [I] [router.go:270]  D:\GO_PATH\src\github.com\beatrice950201\card\controllers\admin no changed
+2019/11/26 17:11:38.274 [I] [router.go:270]  D:\GO_PATH\src\github.com\beatrice950201\card\controllers\admin\news no changed
+2019/11/26 17:11:38.347 [I] [asm_amd64.s:1337]  http server Running on http://:8080
+2019/11/26 17:11:42.633 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|      2.997ms|   match|[44m GET     [0m /admin/sign/login   r:/admin/sign/login
+2019/11/26 17:11:42.703 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|      1.998ms|   match|[44m GET     [0m /static/admin/media/favicons/favicon.png
+2019/11/26 17:11:50.595 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|   1.1122154s|   match|[44m GET     [0m /admin/index/index   r:/admin/index/index
+2019/11/26 17:11:50.618 [D] [server.go:2774]  |      127.0.0.1|[43m 404 [0m|     3.9967ms| nomatch|[44m GET     [0m /static/upload/20191120/20191120174431.jpg
+2019/11/26 17:11:50.734 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|   118.9426ms|   match|[44m GET     [0m /static/admin/js/oneui.core.min.js
+2019/11/26 17:11:50.742 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|    65.9642ms|   match|[44m GET     [0m /static/admin/fonts/simple-line-icons/Simple-Line-Icons.woff2
+2019/11/26 17:11:52.392 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|     16.991ms|   match|[44m GET     [0m /admin/menu/index   r:/admin/menu/index
+2019/11/26 17:11:52.423 [D] [server.go:2774]  |      127.0.0.1|[43m 404 [0m|     4.0038ms| nomatch|[44m GET     [0m /static/upload/20191120/20191120174431.jpg
+2019/11/26 17:11:52.424 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|     7.9972ms|   match|[44m GET     [0m /static/admin/js/plugins/nestable/jquery.nestable.css
+2019/11/26 17:11:52.436 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|    18.9997ms|   match|[44m GET     [0m /static/admin/js/plugins/bootstrap-notify/bootstrap-notify.min.js
+2019/11/26 17:11:52.451 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|    32.9923ms|   match|[44m GET     [0m /static/admin/js/plugins/nestable/jquery.nestable.js
+2019/11/26 17:11:55.666 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|   1.0456617s|   match|[44m GET     [0m /admin/index/index   r:/admin/index/index
+2019/11/26 17:11:55.688 [D] [server.go:2774]  |      127.0.0.1|[43m 404 [0m|     3.0004ms| nomatch|[44m GET     [0m /static/upload/20191120/20191120174431.jpg
+2019/11/26 17:11:57.607 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|    22.9887ms|   match|[44m GET     [0m /admin/news/document/index   r:/admin/news/document/index
+2019/11/26 17:11:57.630 [D] [server.go:2774]  |      127.0.0.1|[43m 404 [0m|     1.9958ms| nomatch|[44m GET     [0m /static/upload/20191120/20191120174431.jpg
+2019/11/26 17:11:57.643 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|    14.9888ms|   match|[44m GET     [0m /static/admin/js/plugins/bootstrap-paginator/bootstrap-paginator.min.js
+2019/11/26 17:11:59.317 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|    11.9905ms|   match|[44m GET     [0m /admin/news/document/create   r:/admin/news/document/create
+2019/11/26 17:11:59.342 [D] [server.go:2774]  |      127.0.0.1|[43m 404 [0m|     4.0113ms| nomatch|[44m GET     [0m /static/upload/20191120/20191120174431.jpg
+2019/11/26 17:11:59.346 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|     6.9965ms|   match|[44m GET     [0m /static/admin/js/plugins/webuploader/webuploader.css
+2019/11/26 17:11:59.889 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|   548.6936ms|   match|[44m GET     [0m /static/admin/js/plugins/ckeditor4/ckeditor.js
+2019/11/26 17:11:59.912 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|   571.6704ms|   match|[44m GET     [0m /static/admin/js/plugins/ckeditor4/lang/zh-cn.js
+2019/11/26 17:11:59.968 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|    627.652ms|   match|[44m GET     [0m /static/admin/js/plugins/webuploader/webuploader.min.js
+2019/11/26 17:12:00.033 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|     5.9964ms|   match|[44m GET     [0m /static/admin/js/plugins/ckeditor4/config.js
+2019/11/26 17:12:00.052 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|     8.9977ms|   match|[44m GET     [0m /static/admin/js/plugins/ckeditor4/skins/moono-lisa/editor.css
+2019/11/26 17:12:00.067 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|    22.9872ms|   match|[44m GET     [0m /static/admin/js/plugins/ckeditor4/styles.js
+2019/11/26 17:12:00.084 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|     6.9964ms|   match|[44m GET     [0m /static/admin/js/plugins/ckeditor4/plugins/scayt/skins/moono-lisa/scayt.css
+2019/11/26 17:12:00.092 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|    14.9902ms|   match|[44m GET     [0m /static/admin/js/plugins/ckeditor4/plugins/tableselection/styles/tableselection.css
+2019/11/26 17:12:00.100 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|    11.9919ms|   match|[44m GET     [0m /static/admin/js/plugins/ckeditor4/plugins/copyformatting/styles/copyformatting.css
+2019/11/26 17:12:00.105 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|    27.9812ms|   match|[44m GET     [0m /static/admin/js/plugins/ckeditor4/plugins/scayt/dialogs/dialog.css
+2019/11/26 17:12:00.111 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|    33.9775ms|   match|[44m GET     [0m /static/admin/js/plugins/ckeditor4/plugins/wsc/skins/moono-lisa/wsc.css
+2019/11/26 17:12:00.116 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|    34.9793ms|   match|[44m GET     [0m /static/admin/js/plugins/ckeditor4/plugins/dialog/styles/dialog.css
+2019/11/26 17:12:00.162 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|     4.9867ms|   match|[44m GET     [0m /static/admin/js/plugins/ckeditor4/contents.css
+2019/11/26 17:12:17.076 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|      999.4µs|   match|[44m GET     [0m /static/admin/js/plugins/ckeditor4/skins/moono-lisa/icons.png
+2019/11/26 17:12:17.103 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|      999.5µs|   match|[44m GET     [0m /static/admin/js/plugins/ckeditor4/plugins/iframe/images/placeholder.png
+2019/11/26 17:12:30.525 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|           0s|   match|[44m GET     [0m /static/upload/20191126/20191126171227Ub1Wk
+2019/11/26 17:12:30.526 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|     1.0023ms|   match|[44m GET     [0m /static/upload/20191126/20191126171227XFxza
+2019/11/26 17:12:30.526 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|           0s|   match|[44m GET     [0m /static/upload/20191126/20191126171228JeNPv
+2019/11/26 17:12:30.527 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|      996.8µs|   match|[44m GET     [0m /static/upload/20191126/201911261712293BZBE
+2019/11/26 17:12:30.527 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|      996.8µs|   match|[44m GET     [0m /static/upload/20191126/20191126171229SZbKl
+2019/11/26 17:12:30.527 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|           0s|   match|[44m GET     [0m /static/upload/20191126/20191126171229M382r
+2019/11/26 17:12:30.530 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|           0s|   match|[44m GET     [0m /static/upload/20191126/20191126171230FLA07
+2019/11/26 17:13:19.082 [I] [router.go:270]  D:\GO_PATH\src\github.com\beatrice950201\card\controllers\index no changed
+2019/11/26 17:13:19.083 [I] [router.go:270]  D:\GO_PATH\src\github.com\beatrice950201\card\controllers\admin no changed
+2019/11/26 17:13:19.084 [I] [router.go:270]  D:\GO_PATH\src\github.com\beatrice950201\card\controllers\admin\news no changed
+2019/11/26 17:13:19.158 [I] [asm_amd64.s:1337]  http server Running on http://:8080
+2019/11/26 17:13:29.315 [I] [router.go:270]  D:\GO_PATH\src\github.com\beatrice950201\card\controllers\index no changed
+2019/11/26 17:13:29.316 [I] [router.go:270]  D:\GO_PATH\src\github.com\beatrice950201\card\controllers\admin no changed
+2019/11/26 17:13:29.318 [I] [router.go:270]  D:\GO_PATH\src\github.com\beatrice950201\card\controllers\admin\news no changed
+2019/11/26 17:13:29.387 [I] [asm_amd64.s:1337]  http server Running on http://:8080
+2019/11/26 17:13:34.381 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|      999.8µs|   match|[44m GET     [0m /static/upload/20191126/20191126171333j9X21
+2019/11/26 17:13:34.388 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|     5.9961ms|   match|[44m GET     [0m /static/upload/20191126/20191126171333YvHtH
+2019/11/26 17:13:34.395 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|    12.9927ms|   match|[44m GET     [0m /static/upload/20191126/20191126171333qGeHN
+2019/11/26 17:13:34.402 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|    19.9883ms|   match|[44m GET     [0m /static/upload/20191126/20191126171333pBaEX
+2019/11/26 17:13:34.404 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|    20.9881ms|   match|[44m GET     [0m /static/upload/20191126/20191126171334diPCQ
+2019/11/26 17:13:34.404 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|    19.9887ms|   match|[44m GET     [0m /static/upload/20191126/20191126171334csaMu
+2019/11/26 17:13:34.406 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|    22.9865ms|   match|[44m GET     [0m /static/upload/20191126/20191126171334iooAc
+2019/11/26 17:14:24.818 [I] [router.go:270]  D:\GO_PATH\src\github.com\beatrice950201\card\controllers\index no changed
+2019/11/26 17:14:24.819 [I] [router.go:270]  D:\GO_PATH\src\github.com\beatrice950201\card\controllers\admin no changed
+2019/11/26 17:14:24.821 [I] [router.go:270]  D:\GO_PATH\src\github.com\beatrice950201\card\controllers\admin\news no changed
+2019/11/26 17:14:24.892 [I] [asm_amd64.s:1337]  http server Running on http://:8080
+2019/11/26 17:14:25.145 [D] [server.go:2774]  |      127.0.0.1|[47m 304 [0m|           0s|   match|[44m GET     [0m /static/upload/20191126/20191126171333j9X21
+2019/11/26 17:14:25.146 [D] [server.go:2774]  |      127.0.0.1|[47m 304 [0m|           0s|   match|[44m GET     [0m /static/upload/20191126/20191126171333YvHtH
+2019/11/26 17:14:25.148 [D] [server.go:2774]  |      127.0.0.1|[47m 304 [0m|        989µs|   match|[44m GET     [0m /static/upload/20191126/20191126171333pBaEX
+2019/11/26 17:14:25.148 [D] [server.go:2774]  |      127.0.0.1|[47m 304 [0m|        989µs|   match|[44m GET     [0m /static/upload/20191126/20191126171333qGeHN
+2019/11/26 17:14:25.149 [D] [server.go:2774]  |      127.0.0.1|[47m 304 [0m|          1ms|   match|[44m GET     [0m /static/upload/20191126/20191126171334diPCQ
+2019/11/26 17:14:25.149 [D] [server.go:2774]  |      127.0.0.1|[47m 304 [0m|           0s|   match|[44m GET     [0m /static/upload/20191126/20191126171334iooAc
+2019/11/26 17:14:25.149 [D] [server.go:2774]  |      127.0.0.1|[47m 304 [0m|           0s|   match|[44m GET     [0m /static/upload/20191126/20191126171334csaMu
+2019/11/26 17:14:31.136 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|      997.7µs|   match|[44m GET     [0m /static/upload/20191126/20191126171430KXHCE
+2019/11/26 17:14:31.142 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|     6.9962ms|   match|[44m GET     [0m /static/upload/20191126/201911261714303wAVR
+2019/11/26 17:14:31.143 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|     6.9954ms|   match|[44m GET     [0m /static/upload/20191126/201911261714306N98M
+2019/11/26 17:14:31.148 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|    12.0055ms|   match|[44m GET     [0m /static/upload/20191126/201911261714303P8ez
+2019/11/26 17:14:31.150 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|    13.9913ms|   match|[44m GET     [0m /static/upload/20191126/201911261714317PIPS
+2019/11/26 17:14:31.150 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|    13.9913ms|   match|[44m GET     [0m /static/upload/20191126/20191126171430TR2O6
+2019/11/26 17:14:31.150 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|     9.9945ms|   match|[44m GET     [0m /static/upload/20191126/20191126171431gQlGF
+2019/11/26 17:15:01.910 [I] [router.go:270]  D:\GO_PATH\src\github.com\beatrice950201\card\controllers\index no changed
+2019/11/26 17:15:01.911 [I] [router.go:270]  D:\GO_PATH\src\github.com\beatrice950201\card\controllers\admin no changed
+2019/11/26 17:15:01.913 [I] [router.go:270]  D:\GO_PATH\src\github.com\beatrice950201\card\controllers\admin\news no changed
+2019/11/26 17:15:01.984 [I] [asm_amd64.s:1337]  http server Running on http://:8080
+2019/11/26 17:15:04.646 [I] [router.go:270]  D:\GO_PATH\src\github.com\beatrice950201\card\controllers\index no changed
+2019/11/26 17:15:04.647 [I] [router.go:270]  D:\GO_PATH\src\github.com\beatrice950201\card\controllers\admin no changed
+2019/11/26 17:15:04.648 [I] [router.go:270]  D:\GO_PATH\src\github.com\beatrice950201\card\controllers\admin\news no changed
+2019/11/26 17:15:04.718 [I] [asm_amd64.s:1337]  http server Running on http://:8080
+2019/11/26 17:15:29.723 [I] [router.go:270]  D:\GO_PATH\src\github.com\beatrice950201\card\controllers\index no changed
+2019/11/26 17:15:29.724 [I] [router.go:270]  D:\GO_PATH\src\github.com\beatrice950201\card\controllers\admin no changed
+2019/11/26 17:15:29.726 [I] [router.go:270]  D:\GO_PATH\src\github.com\beatrice950201\card\controllers\admin\news no changed
+2019/11/26 17:15:29.796 [I] [asm_amd64.s:1337]  http server Running on http://:8080
+2019/11/26 17:15:44.519 [I] [router.go:270]  D:\GO_PATH\src\github.com\beatrice950201\card\controllers\index no changed
+2019/11/26 17:15:44.520 [I] [router.go:270]  D:\GO_PATH\src\github.com\beatrice950201\card\controllers\admin no changed
+2019/11/26 17:15:44.522 [I] [router.go:270]  D:\GO_PATH\src\github.com\beatrice950201\card\controllers\admin\news no changed
+2019/11/26 17:15:44.591 [I] [asm_amd64.s:1337]  http server Running on http://:8080
+2019/11/26 17:15:49.675 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|     1.0005ms|   match|[44m GET     [0m /static/upload/20191126/20191126171549rExxP
+2019/11/26 17:15:49.683 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|     6.0156ms|   match|[44m GET     [0m /static/upload/20191126/20191126171549tqaVz
+2019/11/26 17:15:49.694 [D] [server.go:2774]  |      127.0.0.1|[47m 304 [0m|     4.9913ms|   match|[44m GET     [0m /static/upload/20191126/20191126171549tqaVz
+2019/11/26 17:15:49.695 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|    16.9913ms|   match|[44m GET     [0m /static/upload/20191126/201911261715491KC05
+2019/11/26 17:15:49.701 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|    24.0066ms|   match|[44m GET     [0m /static/upload/20191126/20191126171549wwpcx
+2019/11/26 17:15:49.703 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|    24.9912ms|   match|[44m GET     [0m /static/upload/20191126/20191126171549tt5ed
+2019/11/26 17:15:49.710 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|    30.9817ms|   match|[44m GET     [0m /static/upload/20191126/20191126171549bK19N
+2019/11/26 17:15:49.711 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|    31.9844ms|   match|[44m GET     [0m /static/upload/20191126/20191126171549nf24z
+2019/11/26 17:16:31.890 [I] [router.go:270]  D:\GO_PATH\src\github.com\beatrice950201\card\controllers\index no changed
+2019/11/26 17:16:31.891 [I] [router.go:270]  D:\GO_PATH\src\github.com\beatrice950201\card\controllers\admin no changed
+2019/11/26 17:16:31.892 [I] [router.go:270]  D:\GO_PATH\src\github.com\beatrice950201\card\controllers\admin\news no changed
+2019/11/26 17:16:31.964 [I] [asm_amd64.s:1337]  http server Running on http://:8080
+2019/11/26 17:17:00.158 [I] [router.go:270]  D:\GO_PATH\src\github.com\beatrice950201\card\controllers\index no changed
+2019/11/26 17:17:00.159 [I] [router.go:270]  D:\GO_PATH\src\github.com\beatrice950201\card\controllers\admin no changed
+2019/11/26 17:17:00.161 [I] [router.go:270]  D:\GO_PATH\src\github.com\beatrice950201\card\controllers\admin\news no changed
+2019/11/26 17:17:00.234 [I] [asm_amd64.s:1337]  http server Running on http://:8080
+2019/11/26 17:17:07.058 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|          1ms|   match|[44m GET     [0m /static/upload/20191126/20191126171706cmFYF
+2019/11/26 17:17:07.066 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|     6.9961ms|   match|[44m GET     [0m /static/upload/20191126/20191126171706uClyG
+2019/11/26 17:17:07.072 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|    11.0076ms|   match|[44m GET     [0m /static/upload/20191126/20191126171706Yfwt2
+2019/11/26 17:17:07.077 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|    15.9901ms|   match|[44m GET     [0m /static/upload/20191126/20191126171706lWTTh
+2019/11/26 17:17:07.078 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|    16.9893ms|   match|[44m GET     [0m /static/upload/20191126/20191126171706wXTHJ
+2019/11/26 17:17:07.080 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|    18.9888ms|   match|[44m GET     [0m /static/upload/20191126/20191126171706XTGiA
+2019/11/26 17:17:07.081 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|    18.9885ms|   match|[44m GET     [0m /static/upload/20191126/20191126171707xqqGZ
+2019/11/26 17:17:57.205 [I] [router.go:270]  D:\GO_PATH\src\github.com\beatrice950201\card\controllers\index no changed
+2019/11/26 17:17:57.206 [I] [router.go:270]  D:\GO_PATH\src\github.com\beatrice950201\card\controllers\admin no changed
+2019/11/26 17:17:57.208 [I] [router.go:270]  D:\GO_PATH\src\github.com\beatrice950201\card\controllers\admin\news no changed
+2019/11/26 17:17:57.282 [I] [asm_amd64.s:1337]  http server Running on http://:8080
+2019/11/26 17:18:03.731 [I] [router.go:270]  D:\GO_PATH\src\github.com\beatrice950201\card\controllers\index no changed
+2019/11/26 17:18:03.732 [I] [router.go:270]  D:\GO_PATH\src\github.com\beatrice950201\card\controllers\admin no changed
+2019/11/26 17:18:03.735 [I] [router.go:270]  D:\GO_PATH\src\github.com\beatrice950201\card\controllers\admin\news no changed
+2019/11/26 17:18:03.807 [I] [asm_amd64.s:1337]  http server Running on http://:8080
+2019/11/26 17:18:09.023 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|           0s|   match|[44m GET     [0m /static/upload/20191126/20191126171808dRZqS
+2019/11/26 17:18:09.025 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|     1.0001ms|   match|[44m GET     [0m /static/upload/20191126/20191126171808rpqZR
+2019/11/26 17:18:09.027 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|      999.6µs|   match|[44m GET     [0m /static/upload/20191126/2019112617180834Y0S
+2019/11/26 17:18:09.028 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|     1.0011ms|   match|[44m GET     [0m /static/upload/20191126/20191126171808mjvsl
+2019/11/26 17:18:09.029 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|     2.9986ms|   match|[44m GET     [0m /static/upload/20191126/20191126171808MsoZt
+2019/11/26 17:18:09.031 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|     3.9981ms|   match|[44m GET     [0m /static/upload/20191126/20191126171808yYSg5
+2019/11/26 17:18:09.031 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|     1.9991ms|   match|[44m GET     [0m /static/upload/20191126/20191126171808324Vl

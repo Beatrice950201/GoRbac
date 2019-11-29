@@ -1,0 +1,28 @@
+<script src="/static/admin/js/plugins/bootstrap-notify/bootstrap-notify.min.js"></script>
+<script src="/static/admin/js/plugins/bootstrap-paginator/bootstrap-paginator.min.js"></script>
+<script>
+    $(".pagination").bootstrapPaginator({
+        currentPage: '{{.Page.PageNo}}',
+        totalPages: '{{.Page.TotalPage}}',
+        bootstrapMajorVersion: 3,
+        alignment: "center",
+        size: "normal",
+        numberOfPages: 10,
+        itemContentClass: function () {
+            return "page-link";
+        },
+        itemContainerClass: function (type, page, current) {
+            return (page === current) ? "page-item active" : "page-item";
+        },
+        tooltipTitles:function(type, page){
+            return "跳转到第" + page + "页"
+        },
+        pageUrl:function(type,page){
+            return "{{urlfor "NewsDocument.Index" }}?page=" + page +"&cid={{$.cid}}"
+        }
+    });
+   app.switch_status();
+   app.ajax_delete();
+   app.ajax_deletes();
+   app.checkAllTable();
+</script>

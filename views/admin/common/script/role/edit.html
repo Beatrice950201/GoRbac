@@ -1,0 +1,35 @@
+<script src="/static/admin/js/plugins/jstree/jstree.min.js"></script>
+<script>
+    $(document).ready(function() {
+        const $tree_list = {};
+        $('.js-tree').each(function () {
+            const $tree = $(this);
+            $tree.jstree({
+                plugins: ["checkbox"],
+                "checkbox" : {
+                    "keep_selected_style" : false,
+                    "three_state" : false,
+                    "cascade" : 'down+up'
+                }
+            });
+            $tree_list[$(this).data('tab')] = $tree;
+        });
+        $(".ajax_from").submit(function () {
+            let form_data = $(this).serialize();
+            let auth_node = [];
+            $.each($tree_list, function (index) {
+                let data = $(this).jstree(true).get_checked(),res = [];
+                if(data.length > 0){res.push(parseInt(index))}
+                for (let i in data){
+                    res.push(parseInt(data[i]));
+                }
+                auth_node.push.apply(auth_node, res);
+            });
+            if (auth_node.length) {
+                form_data += '&menu_auth='+JSON.stringify(auth_node);
+            }
+            app.post($(this).attr("action"),form_data);
+            return false
+        });
+    });
+</script>

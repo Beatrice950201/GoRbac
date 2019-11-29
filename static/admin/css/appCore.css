@@ -1,0 +1,84 @@
+.btn{
+ font-weight: unset;
+ font-size: 0.9rem;
+}
+.data-table-toolbar{
+    margin-bottom: 10px;
+}
+.content-side-full-cus{
+    padding-top: 0.5rem;
+}
+
+.header-cus_button:focus,
+.header-cus_button:active:focus,
+.header-cus_button.active:focus,
+.header-cus_button.focus,
+.header-cus_button:active.focus,
+.header-cus_button.active.focus {
+    outline: none;
+    border-color: transparent;
+    box-shadow:none;
+}
+
+
+.header-cus_button{
+    line-height: 2.7;
+    border: 0;
+    padding: .375rem 1.05rem;
+}
+.header-cus_button:hover{
+   background-color: #f5f5f5;
+}
+.header-cus_button_box .badge-primary{
+    line-height: 2.7;
+    border: 0;
+    padding: .375rem 1.05rem;
+    color: #fff;
+}
+
+
+.content-header{
+    max-height: 50px;
+}
+
+@media (min-width: 768px){
+    #page-header .content-header {
+        padding-left: 0;
+        padding-right: 0.875rem;
+    }
+}
+.nav-main-link-name{
+    margin-left: 5px;
+}
+.form-control::placeholder,.form-control,.custom-control-label{
+    font-size: 14px;
+    font-weight: unset !important;
+}
+.form-group label {
+    font-size: 14px;
+    font-weight: 600;
+}
+.help-block {
+    margin-top: 5px;
+    margin-bottom: 0;
+    font-style: italic;
+    font-size: 12px;
+    color: #a4a4a4;
+}
+.help-block {
+    font-style: normal;
+}
+.help-block code{
+    font-size: 90%;
+}
+.align-text-center{text-align: center}
+
+#page-loader{
+    background: rgba(255, 255, 255, 0.16);
+}
+.alert-success{
+    font-size: 14.5px;
+}
+#page-container.page-header-fixed #main-container {
+    padding-top: 3.1rem;
+}

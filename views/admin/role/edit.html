@@ -1,0 +1,93 @@
+<main id="main-container">
+    <!-- Hero -->
+    {{template "admin/common/breadcrumb.html" .}}
+    <!-- END Hero -->
+    <!-- Page Content -->
+    <div class="content" style="max-width: initial;">
+            <!-- Full Table -->
+            <div class="block">
+                <form class="ajax_from" action='{{urlfor "RoleController.Edit"}}' method="post">
+                    <ul class="nav nav-tabs nav-tabs-block" data-toggle="tabs" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#role_info">角色信息</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#role_auth">访问授权</a>
+                        </li>
+                    </ul>
+                    <div class="block-content tab-content" style="padding-top: 0;">
+                        <div class="tab-pane fade fade-left show active font-size-sm" id="role_info" role="tabpanel">
+                                <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    <label class="col-xs-12">所属角色</label>
+                                    <div class="col-xs-12">
+                                        <select class="form-control" name="pid">
+                                            <option value="0">顶级角色</option>
+                                            {{range $i, $e := .pids}}
+                                             <option {{if eq $.info.Pid $e.Id }}selected{{end}} value="{{$e.Id}}">{{str2html $e.Name}}</option>
+                                            {{end}}
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    <label class="col-xs-12">角色名称</label>
+                                    <div class="col-xs-12">
+                                        <input class="form-control" type="text" value="{{$.info.Name}}" name="name" placeholder="请输入角色名称"/>
+                                    </div>
+                                </div>
+                                <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    <label class="col-xs-12">角色描述</label>
+                                    <div class="col-xs-12">
+                                        <textarea class="form-control" name="description" rows="5" placeholder="请输入角色描述..">{{$.info.Description}}</textarea>
+                                    </div>
+                                </div>
+                                <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    <label class="col-xs-12">是否可登陆后台</label>
+                                    <div class="col-xs-12">
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                            <input type="radio" class="custom-control-input" value="0" id="access_0" name="access" {{if eq $.info.Access 0 }}checked{{end}} >
+                                            <label class="custom-control-label" for="access_0">不能登陆</label>
+                                        </div>
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                            <input type="radio" class="custom-control-input" value="1" id="access_1" name="access" {{if eq $.info.Access 1 }}checked{{end}}>
+                                            <label class="custom-control-label" for="access_1">允许登陆</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    <label class="col-xs-12">排序</label>
+                                    <div class="col-xs-12">
+                                        <input class="form-control" type="number"  name="sort" value="{{$.info.Sort}}" placeholder="请输入排序数字"/>
+                                        <div class="help-block">数值越大越靠前</div>
+                                    </div>
+                                </div>
+                        </div>
+                        <div class="tab-pane fade fade-left" id="role_auth" role="tabpanel">
+                            <ul class="nav nav-tabs nav-tabs-alt" id="menu-tab" data-toggle="tabs" role="tablist">
+                                {{range $i, $e := .group}}
+                                    <li class="nav-item">
+                                        <a class="nav-link {{if eq $i 0}}active{{end}}" data-tab="{{$e.Id}}" href="#role_auth_tab_{{$e.Id}}">{{$e.Title}}</a>
+                                    </li>
+                                {{end}}
+                            </ul>
+                            <div class="block-content tab-content font-size-sm">
+                                {{range $i, $e := .group}}
+                                    <div class="tab-pane js-tree {{if eq $i 0}}active{{end}}" data-tab="{{$e.Id}}" id="role_auth_tab_{{$e.Id}}" role="tabpanel">
+                                        {{str2html $e.HtmlTree}}
+                                    </div>
+                                {{end}}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group col-md-12 col-xs-12" style="padding-bottom: 20px;">
+                        <div class="col-xs-12 align-text-center">
+                            <input type="hidden" name="id" value="{{$.info.Id}}">
+                            <button class="btn btn-info" type="submit">提交</button>
+                            <button class="btn btn-secondary" type="button" onclick="javascript:history.back(-1);return false;">返回</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <!-- END Full Table -->
+    </div>
+    <!-- END Page Content -->
+</main>

@@ -1,0 +1,94 @@
+<main id="main-container">
+    <!-- Hero -->
+    {{template "admin/common/breadcrumb.html" .}}
+    <!-- END Hero -->
+    <!-- Page Content -->
+    <div class="content" style="max-width: initial;">
+        <!-- Full Table -->
+        <div class="block">
+            <div class="block-header bg-gray-lighter">
+                <h3 class="block-title">资讯栏目</h3>
+                <div class="block-options">
+                    <button type="button" class="btn-block-option" data-toggle="block-option" data-action="fullscreen_toggle">
+                        <i class="si si-size-fullscreen"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="block-content tab-content">
+                <div class="tab-pane active">
+                    <div class="row data-table-toolbar">
+                        <div class="col-sm-12">
+                            <div class="toolbar-btn-action">
+                                <a title="添加栏目" class="btn btn-square btn-primary" href='{{urlfor "NewsCategory.Create"}}'>
+                                    <i class="fa fa-plus-circle"></i> 添加栏目
+                                </a>
+                                <a title="删除栏目" class="btn btn-square btn-danger ajax_deletes" data-action='{{urlfor "NewsCategory.Delete"}}' href="javascript:void(0);">
+                                    <i class="fa fa-times-circle"></i> 删除栏目
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-striped table-vcenter font-size-sm">
+                            <thead>
+                            <tr>
+                                <th class="text-center">
+                                    <div class="custom-control custom-checkbox d-inline-block">
+                                        <input type="checkbox" class="custom-control-input" id="checkAll" name="check[]">
+                                        <label class="custom-control-label" for="checkAll"></label>
+                                    </div>
+                                </th>
+                                <th class="text-center">ID</th>
+                                <th class="text-center">发布用户</th>
+                                <th class="text-center">标题</th>
+                                <th class="text-center">描述</th>
+                                <th class="text-center">创建时间</th>
+                                <th class="text-center">排序</th>
+                                <th class="text-center">状态</th>
+                                <th class="text-center">操作</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            {{range $i, $e := .Page.List}}
+                                <tr>
+                                    <td class="text-center">
+                                        <div class="custom-control custom-checkbox d-inline-block">
+                                            <input type="checkbox" class="custom-control-input checkList" value="{{$e.Id}}" id="check_{{$e.Id}}" name="check[]">
+                                            <label class="custom-control-label" for="check_{{$e.Id}}"></label>
+                                        </div>
+                                    </td>
+                                    <td class="text-center">{{$e.Id}}</td>
+                                    <td class="text-center">{{$e.Nickname}}</td>
+                                    <td class="text-center">{{$e.Title}}</td>
+                                    <td class="text-center">{{$e.Description}}</td>
+                                    <td class="text-center">{{date $e.CreateTime "Y-m-d"}}</td>
+                                    <td class="text-center">{{$e.Sort}}</td>
+                                    <td class="text-center">
+                                        <div class="custom-control custom-switch mb-1">
+                                            <input type="checkbox" class="custom-control-input switch_status" data-action='{{urlfor "NewsCategory.Status"}}' data-ids="{{$e.Id}}" id="status_{{$e.Id}}" name="status" {{if eq $e.Status 1 }} checked {{end}}>
+                                            <label class="custom-control-label" for="status_{{$e.Id}}"></label>
+                                        </div>
+                                    </td>
+                                    <td class="text-center">
+                                        <div class="btn-group btn-group-sm">
+                                            <a class="btn btn-outline-secondary" href='{{urlfor "NewsCategory.Edit" "id" $e.Id}}' data-toggle="tooltip" data-original-title="编辑">
+                                                <i class="fa fa-pencil-alt"></i>
+                                            </a>
+                                            <a class="btn btn-outline-secondary ajax_delete" data-action='{{urlfor "NewsCategory.Delete"}}' data-ids="{{$e.Id}}" href="javascript:void(0);" data-toggle="tooltip" data-original-title="删除">
+                                                <i class="fa fa-times"></i>
+                                            </a>
+                                        </div>
+                                    </td>
+                                </tr>
+                            {{end}}
+                            </tbody>
+                        </table>
+                        <ul class="pagination" style="justify-content: center!important;"></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- END Full Table -->
+    </div>
+    <!-- END Page Content -->
+</main>

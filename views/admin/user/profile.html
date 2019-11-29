@@ -1,0 +1,71 @@
+<main id="main-container">
+    <!-- Hero -->
+    {{template "admin/common/breadcrumb.html" .}}
+    <!-- END Hero -->
+    <!-- Page Content -->
+    <div class="content font-size-sm" style="max-width: initial;">
+        <!-- Full Table -->
+        <div class="block">
+            <div class="block-header bg-gray-lighter">
+                <h3 class="block-title">资料管理</h3>
+                <div class="block-options">
+                    <button type="button" class="btn-block-option" data-toggle="block-option" data-action="fullscreen_toggle">
+                        <i class="si si-size-fullscreen"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="block-content">
+                <form class="row ajax_from" action='{{urlfor "UserController.Profile"}}' method="post">
+                    <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <label class="col-xs-12">用户昵称/公司名称</label>
+                        <div class="col-xs-12">
+                            <input class="form-control" type="text" name="nickname" value="{{$.info.Nickname}}" placeholder="用户昵称/公司名称"/>
+                            <div class="help-block">必填，可以是中文</div>
+                        </div>
+                    </div>
+                    <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <label class="col-xs-12">用户邮箱/公司邮箱</label>
+                        <div class="col-xs-12">
+                            <input class="form-control" type="email" name="email" value="{{$.info.Email}}" placeholder="用户邮箱/公司邮箱"/>
+                        </div>
+                    </div>
+                    <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <label class="col-xs-12">登陆密码</label>
+                        <div class="col-xs-12">
+                            <input class="form-control" type="password" name="password" value="" placeholder="登陆密码"/>
+                        </div>
+                        <div class="help-block">不修改密码请留空，请谨慎操作...</div>
+                    </div>
+                    <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <label class="col-xs-12">联系电话</label>
+                        <div class="col-xs-12">
+                            <input class="form-control" type="text" name="mobile" value="{{$.info.Mobile}}" placeholder="联系电话"/>
+                        </div>
+                    </div>
+                    <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <label class="col-xs-12">用户头像/公司LOGO</label>
+                        <div class="col-xs-12">
+                            <button type="button" style="padding: 0;" class="btn btn-primary js-upload-image">
+                                <i class="fa fa-fw fa-upload mr-1"></i> 选择文件
+                            </button>
+                            <div class="js-upload-image_bs">
+                                {{if $.info.Avatar }}
+                                   <img src="/{{$.info.Avatar}}"/><input type="hidden" value="{{$.info.Avatar}}">
+                                {{end}}
+                            </div>
+                            <div class="help-block">请选择上传的文件,支持格式：.jpg，png</div>
+                        </div>
+                    </div>
+                    <div class="form-group col-md-12 col-xs-12">
+                        <div class="col-xs-12 align-text-center">
+                            <button class="btn btn-info" type="submit">提交</button>
+                            <button class="btn btn-secondary" type="button" onclick="javascript:history.back(-1);return false;">返回</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- END Full Table -->
+    </div>
+    <!-- END Page Content -->
+</main>

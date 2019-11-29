@@ -1,0 +1,65 @@
+<main id="main-container">
+    <!-- Hero -->
+    {{template "admin/common/breadcrumb.html" .}}
+    <!-- END Hero -->
+    <!-- Page Content -->
+    <div class="content font-size-sm" style="max-width: initial;">
+        <!-- Full Table -->
+        <div class="block">
+            <div class="block-header bg-gray-lighter">
+                <h3 class="block-title">添加栏目</h3>
+                <div class="block-options">
+                    <button type="button" class="btn-block-option" data-toggle="block-option" data-action="fullscreen_toggle">
+                        <i class="si si-size-fullscreen"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="block-content">
+                <form class="row ajax_from" action='{{urlfor "NewsCategory.Edit"}}' method="post">
+                    <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <label class="col-xs-12">栏目名称</label>
+                        <div class="col-xs-12">
+                            <input class="form-control" type="text" name="title" value="{{$.info.Title}}" placeholder="请输入栏目名称"/>
+                            <div class="help-block">必填，请输入栏目名称</div>
+                        </div>
+                    </div>
+                    <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <label class="col-xs-12">栏目描述</label>
+                        <div class="col-xs-12">
+                            <textarea class="form-control" name="description" rows="5" placeholder="请输入栏目描述..">{{$.info.Description}}</textarea>
+                        </div>
+                    </div>
+                    <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <label class="col-xs-12">栏目状态</label>
+                        <div class="col-xs-12">
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" class="custom-control-input" value="0" id="status_0" name="status" {{if eq $.info.Status 0 }}checked{{end}}>
+                                <label class="custom-control-label" for="status_0">禁用</label>
+                            </div>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" class="custom-control-input" value="1" id="status_1" name="status" {{if eq $.info.Status 1 }}checked{{end}}>
+                                <label class="custom-control-label" for="status_1">启用</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <label class="col-xs-12">排序</label>
+                        <div class="col-xs-12">
+                            <input class="form-control" type="number" name="sort" value="{{$.info.Sort}}" placeholder="请输入排序数字"/>
+                            <div class="help-block">数值越大越靠前</div>
+                        </div>
+                    </div>
+                    <div class="form-group col-md-12 col-xs-12">
+                        <div class="col-xs-12 align-text-center">
+                            <input type="hidden" name="id" value="{{$.info.Id}}">
+                            <button class="btn btn-info" type="submit">提交</button>
+                            <button class="btn btn-secondary" type="button" onclick="javascript:history.back(-1);return false;">返回</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- END Full Table -->
+    </div>
+    <!-- END Page Content -->
+</main>

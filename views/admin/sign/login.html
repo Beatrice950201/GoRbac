@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="zh">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>{{config "String" "web_name" ""}} - 登陆中心</title>
+    <meta name="description" content='{{config "String" "web_name" ""}} - 登陆中心'>
+    <meta name="robots" content="noindex, nofollow">
+    <!-- Icons -->
+    <link rel="shortcut icon" href="/static/admin/media/favicons/favicon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/static/admin/media/favicons/favicon-192x192.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/static/admin/media/favicons/apple-touch-icon-180x180.png">
+    <!-- END Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400italic,600,700%7COpen+Sans:300,400,400italic,600,700">
+    <!-- Stylesheets -->
+    <link rel="stylesheet" id="css-main" href="/static/admin/css/oneui.min.css">
+    <link rel="stylesheet" href="/static/admin/css/appCore.css">
+    <!-- END Stylesheets -->
+    <!-- Page css Plugins -->
+    <link rel="stylesheet" href="/static/admin/js/plugins/sweet-alert/css/sweet-alert.css">
+    <!-- Page css Plugins -->
+</head>
+<body>
+<div id="page-loader" class="hide"></div>
+<!-- Page Container -->
+<div id="page-container">
+    <!-- Main Container -->
+    <main id="main-container">
+        <!-- Page Content -->
+        <div class="hero-static d-flex align-items-center">
+            <div class="w-100">
+                <!-- Sign In Section -->
+                <div class="content content-full bg-white">
+                    <div class="row justify-content-center">
+                        <div class="col-md-8 col-lg-6 col-xl-4 py-4">
+
+                            <!-- Header -->
+                            <div class="text-center">
+                                <p class="mb-2">
+                                    <i class="fa fa-2x fa-circle-notch text-primary"></i>
+                                </p>
+                                <h1 class="h4 mb-1">
+                                    系统登陆
+                                </h1>
+                                <h2 class="h6 font-w400 text-muted mb-3">
+                                    {{config "String" "web_name" ""}}管理中心登陆
+                                </h2>
+                            </div>
+                            <!-- END Header -->
+
+                            <!-- Sign In Form -->
+                           <form class="js-validation-signin" action='{{urlfor "SignController.Login"}}' method="POST">
+                                <div class="py-3">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control form-control-lg form-control-alt" id="login-username" name="login-username" placeholder="用户名">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="password" class="form-control form-control-lg form-control-alt" id="login-password" name="login-password" placeholder="密码">
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="d-md-flex align-items-md-center justify-content-md-between">
+                                            <div class="custom-control custom-switch">
+                                                <input type="checkbox" class="custom-control-input" id="login-remember" name="login-remember">
+                                                <label class="custom-control-label font-w400" for="login-remember">记住我？</label>
+                                            </div>
+                                            <div class="py-2">
+                                                <a class="font-size-sm" href="javascript:void(0);">忘记密码?</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group row justify-content-center mb-0">
+                                    <div class="col-md-6 col-xl-5">
+                                        <button type="submit" class="btn btn-block btn-primary">
+                                            <i class="fa fa-fw fa-sign-in-alt mr-1"></i> 登陆
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                            <!-- END Sign In Form -->
+                        </div>
+                    </div>
+                </div>
+                <!-- END Sign In Section -->
+                <!-- Footer -->
+                <div class="font-size-sm text-center text-muted py-3">
+                    <strong>{{config "String" "web_name" ""}}</strong> &copy; <span data-toggle="year-copy"></span>
+                </div>
+                <!-- END Footer -->
+            </div>
+        </div>
+        <!-- END Page Content -->
+    </main>
+    <!-- END Main Container -->
+</div>
+<!-- END Page Container -->
+
+<script src="/static/admin/js/core/jquery.min.js"></script>
+<script src="/static/admin/js/oneui.app.min.js"></script>
+<!-- Page JS Plugins -->
+<script src="/static/admin/js/plugins/jquery-validation/jquery.validate.min.js"></script>
+<script src="/static/admin/js/plugins/sweet-alert/js/sweet-alert.min.js"></script>
+<!-- Page JS Code -->
+<script src="/static/admin/js/app_core.js"></script>
+<script src="/static/admin/js/pages/sign_login.js"></script>
+</body>
+</html>

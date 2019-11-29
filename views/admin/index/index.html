@@ -1,0 +1,48 @@
+
+<main id="main-container">
+    <!-- Page Content -->
+    <div class="content">
+        <!-- Dashboard Charts -->
+        <div class="row font-size-sm">
+            <div class="col-md-12">
+                <div class="block block-bordered">
+                    <div class="block-header bg-gray-lighter">
+                        <h3 class="block-title">系统信息</h3>
+                    </div>
+                    <div class="block-content">
+                        <table class="table">
+                            <tbody>
+                            <tr>
+                                <td>软件版本</td>
+                                <td id="product-update">
+                                    {{config "String" "web_versions" ""}}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>GoLang版本</td>
+                                <td>{{$.GoVersion}}</td>
+                            </tr>
+                            <tr>
+                                <td>服务器系统</td>
+                                <td>{{$.SystemVersion}}</td>
+                            </tr>
+                            <tr>
+                                <td>CPU信息</td>
+                                <td>{{$.CpuInfo}}</td>
+                            </tr>
+                            <tr>
+                                <td>内存信息</td>
+                                <td>总计：{{$.Memory}}G &nbsp;&nbsp; 剩余：<a class="label label-danger" href="javascript:void(0)">{{$.MemoryUsedPercent}}%</a></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- END Dashboard Charts -->
+
+    </div>
+    <!-- END Page Content -->
+
+</main>

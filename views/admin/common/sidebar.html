@@ -1,0 +1,82 @@
+<nav id="sidebar" aria-label="Main Navigation">
+    <!-- Side Header -->
+    <div class="content-header bg-white-5">
+        <!-- Logo -->
+        <a class="font-w600 text-dual" href='{{urlfor "IndexController.Index"}}'>
+            <i class="fa fa-circle-notch text-primary"></i>
+            <span class="smini-hide">
+               <span class="font-w700 font-size-h5">{{config "String" "web_name" ""}}中心</span> <span class="font-w400">{{config "String" "web_versions" ""}}</span>
+            </span>
+        </a>
+        <!-- END Logo -->
+        <!-- Options -->
+        <div>
+            <!-- Color Variations -->
+            <div class="dropdown d-inline-block ml-3">
+                <a class="text-dual font-size-sm" id="sidebar-themes-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">
+                    <i class="si si-drop"></i>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right font-size-sm smini-hide border-0" aria-labelledby="sidebar-themes-dropdown">
+                  <a class="dropdown-item d-flex align-items-center justify-content-between" data-toggle="theme" data-theme="default" href="#">
+                        <span>默认</span>
+                        <i class="fa fa-circle text-default"></i>
+                    </a>
+                    <a class="dropdown-item d-flex align-items-center justify-content-between" data-toggle="theme" data-theme="/static/admin/css/themes/amethyst.min.css" href="#">
+                        <span>紫色</span>
+                        <i class="fa fa-circle text-amethyst"></i>
+                    </a>
+                    <a class="dropdown-item d-flex align-items-center justify-content-between" data-toggle="theme" data-theme="/static/admin/css/themes/modern.min.css" href="#">
+                        <span>现代</span>
+                        <i class="fa fa-circle text-modern"></i>
+                    </a>
+                    <a class="dropdown-item d-flex align-items-center justify-content-between" data-toggle="theme" data-theme="/static/admin/css/themes/smooth.min.css" href="#">
+                        <span>流畅</span>
+                        <i class="fa fa-circle text-smooth"></i>
+                    </a>
+                    <!-- END Color Themes -->
+                </div>
+            </div>
+            <!-- END Themes -->
+            <!-- Close Sidebar, Visible only on mobile screens -->
+            <a class="d-lg-none text-dual ml-3" data-toggle="layout" data-action="sidebar_close" href="javascript:void(0)">
+                <i class="fa fa-times"></i>
+            </a>
+            <!-- END Close Sidebar -->
+        </div>
+        <!-- END Options -->
+    </div>
+    <!-- END Side Header -->
+    <!-- Side Navigation -->
+    <div class="content-side content-side-full content-side-full-cus">
+        <ul class="nav-main">
+            {{range $index, $elem := .sideBarMenus}}
+                {{if le ($elem.Child|len) 0 }}
+                    <li class="nav-main-item">
+                        <a class="nav-main-link {{if eq $.MenuCurrentId.Id $elem.Id }} active {{end}}" href='{{if $elem.UrlValue }} {{$elem.UrlValue}}{{else}}javascript:void(0);{{end}}'>
+                            <i class="fa fa-fw fa-{{$elem.Icon}}"></i>
+                            <span class="nav-main-link-name"> {{$elem.Title}}</span>
+                        </a>
+                    </li>
+                {{else}}
+                    <li class="nav-main-item {{if eq $.MenuCurrentId.Pid $elem.Id }}open{{end}}">
+                        <a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true" aria-expanded='{{if eq $.MenuCurrentId.Pid $elem.Id }}true{{else}}false{{end}}' href="javascript:void(0)">
+                            <i class="fa fa-fw fa-{{$elem.Icon}}"></i>
+                            <span class="nav-main-link-name"> {{$elem.Title}}</span>
+                        </a>
+                        <ul class="nav-main-submenu">
+                            {{range $i, $e := $elem.Child}}
+                            <li class="nav-main-item">
+                                <a class="nav-main-link {{if eq $.MenuCurrentId.Id $e.Id }} active {{end}}" href="{{if $e.UrlValue }} {{$e.UrlValue}}{{else}}javascript:void(0);{{end}}">
+                                    <i class="fa fa-fw fa-{{$e.Icon}}"></i>
+                                    <span class="nav-main-link-name"> {{$e.Title}}</span>
+                                </a>
+                            </li>
+                            {{end}}
+                        </ul>
+                    </li>
+                {{end}}
+            {{end}}
+        </ul>
+    </div>
+    <!-- END Side Navigation -->
+</nav>

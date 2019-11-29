@@ -1,0 +1,41 @@
+<script>
+    $(document).ready(function() {
+      const default_value = $("#module").val();
+      default_value && GetChildMenu(default_value);
+        $("#module").change(function () {
+            GetChildMenu($(this).val());
+        })
+       $(".ajax_from").submit(function () {
+           app.post($(this).attr("action"),$(this).serialize());
+          return false
+       });
+    });
+    function  GetChildMenu(value){
+        if(value <= 0){$("#module_html").html("<option value='0' selected>顶级模块</option>");}
+        app.post($("#module").data("action"),{id:value},function (res) {
+            if(res){
+                const data = res.data;
+                let html = "";
+                    html +="<option value='"+value+"' selected>顶级栏目</option>";
+                    html += CreateHtml(data,0,$("#module").data("active"));
+                $("#module_html").html(html);
+            }
+        })
+    }
+    function CreateHtml(data,lv,pid) {
+        var html = '';
+        for (var i in data) {
+            var prefix_html = "";
+            if(lv > 0){
+                for (k = 0; k < lv*3; k++) {prefix_html += "&nbsp;";}
+                prefix_html += "┝";
+            }
+            var selected = data[i].id == pid ? "selected" : "";
+            html += '<option '+selected+' value="'+data[i].id+'">'+prefix_html+data[i].title+'</option>';
+            if(data[i].child){
+                html += CreateHtml(data[i].child,lv+1,pid);
+            }
+        }
+        return html;
+    }
+</script>

@@ -1,0 +1,51 @@
+<aside id="side-overlay" class="font-size-sm">
+    <!-- Side Header -->
+    <div class="content-header border-bottom">
+        <!-- User Avatar -->
+        <a class="img-link mr-1" href="javascript:void(0)">
+            <img class="img-avatar img-avatar32" src="/{{$.users.Avatar}}" alt="">
+        </a>
+        <!-- END User Avatar -->
+        <!-- User Info -->
+        <div class="ml-2">
+            <a class="link-fx text-dark font-w600" href="javascript:void(0)">{{$.users.Nickname}}</a>
+        </div>
+        <!-- END User Info -->
+        <!-- Close Side Overlay -->
+        <!-- Layout API, functionality initialized in Template._uiApiLayout() -->
+        <a class="ml-auto btn btn-sm btn-dual" href="javascript:void(0)" data-toggle="layout" data-action="side_overlay_close">
+            <i class="fa fa-fw fa-times text-danger"></i>
+        </a>
+        <!-- END Close Side Overlay -->
+    </div>
+    <!-- END Side Header -->
+    <!-- Side Content -->
+    <div class="content-side" style="padding-top: 0;">
+        <div class="tab-pane pull-x fade fade-left show active" id="so-overview" role="tabpanel">
+            <!-- Quick Settings -->
+            <div class="block mb-0">
+                <div class="block-header block-header-default">
+                    <h3 class="block-title">系统设置</h3>
+                    <div class="block-options">
+                        <button type="button" class="btn-block-option" data-toggle="block-option" data-action="content_toggle"></button>
+                    </div>
+                </div>
+                <div class="block-content">
+                    <!-- Quick Settings Form -->
+                    <form action="#" method="POST" onsubmit="return false;">
+                        <div class="form-group">
+                            <p class="font-w600 mb-2">站点开关</p>
+                            <div class="custom-control custom-switch mb-1">
+                                <input type="checkbox" class="custom-control-input" id="so-settings-check1" name="so-settings-check1" checked>
+                                <label class="custom-control-label" for="so-settings-check1">站点关闭后将不能访问</label>
+                            </div>
+                        </div>
+                    </form>
+                    <!-- END Quick Settings Form -->
+                </div>
+            </div>
+            <!-- END Quick Settings -->
+        </div>
+    </div>
+    <!-- END Side Content -->
+</aside>

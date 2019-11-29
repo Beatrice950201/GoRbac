@@ -1,0 +1,101 @@
+<main id="main-container">
+    <!-- Hero -->
+    {{template "admin/common/breadcrumb.html" .}}
+    <!-- END Hero -->
+    <!-- Page Content -->
+    <div class="content" style="max-width: initial;">
+        <!-- Full Table -->
+        <div class="block">
+            <div class="block-header bg-gray-lighter">
+                <h3 class="block-title">授权中心</h3>
+                <div class="block-options">
+                    <button type="button" class="btn-block-option" data-toggle="block-option" data-action="fullscreen_toggle">
+                        <i class="si si-size-fullscreen"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="block-content tab-content">
+                <div class="tab-pane active">
+                    <div class="row data-table-toolbar">
+                        <div class="col-sm-12">
+                           <div class="toolbar-btn-action">
+                                <a title="新增" class="btn btn-square btn-primary" href='{{urlfor "UserController.Create"}}'><i class="fa fa-plus-circle"></i> 新增</a>
+
+                               <a title="启用" class="btn btn-square btn-success switch_status_all" data-value="1" data-action='{{urlfor "UserController.Status"}}' href="javascript:void(0);">
+                                    <i class="fa fa-check-circle-o"></i> 启用
+                                </a>
+                                <a title="禁用" class="btn btn-square btn-warning switch_status_all" data-value="0" data-action='{{urlfor "UserController.Status"}}' href="javascript:void(0);">
+                                    <i class="fa fa-ban"></i> 禁用
+                                </a>
+                                <a title="删除" class="btn btn-square btn-danger ajax_deletes" data-action='{{urlfor "UserController.Delete"}}' href="javascript:void(0);">
+                                    <i class="fa fa-times-circle"></i> 删除
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-striped table-vcenter">
+                            <thead>
+                            <tr>
+                                <th class="text-center">
+                                    <div class="custom-control custom-checkbox d-inline-block">
+                                        <input type="checkbox" class="custom-control-input" id="checkAll" name="check[]">
+                                        <label class="custom-control-label" for="checkAll"></label>
+                                    </div>
+                                </th>
+                                <th class="text-center">ID</th>
+                                <th class="text-center">用户名</th>
+                                <th class="text-left">昵称</th>
+{{/*                                <th class="text-center">邮箱</th>*/}}
+{{/*                                <th class="text-center">手机号</th>*/}}
+                                <th class="text-center">最后登陆时间</th>
+                                <th class="text-center">状态</th>
+                                <th class="text-center">操作</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            {{range $i, $e := .lists}}
+                            <tr>
+                                <td class="text-center">
+                                    <div class="custom-control custom-checkbox d-inline-block">
+                                        <input type="checkbox" class="custom-control-input checkList" value="{{$e.Id}}" id="check_{{$e.Id}}" name="check[]">
+                                        <label class="custom-control-label" for="check_{{$e.Id}}"></label>
+                                    </div>
+                                </td>
+                                <td class="text-center">{{$e.Id}}</td>
+                                <td class="text-center">{{str2html $e.Username}}</td>
+                                <td class="text-left">{{str2html $e.Nickname}}</td>
+{{/*                                <td class="text-center">{{$e.Email}}</td>*/}}
+{{/*                                <td class="text-center">{{$e.Mobile}}</td>*/}}
+                                <td class="text-center">{{date $e.UpdateTime "m-d"}}</td>
+                                <td class="text-center">
+                                    <div class="custom-control custom-switch mb-1">
+                                        <input type="checkbox" class="custom-control-input switch_status" data-action='{{urlfor "UserController.Status"}}' data-ids="{{$e.Id}}" id="status_{{$e.Id}}" name="status" {{if eq $e.Status 1 }} checked {{end}}>
+                                        <label class="custom-control-label" for="status_{{$e.Id}}"></label>
+                                    </div>
+                                </td>
+                                <td class="text-center">
+                                    <div class="btn-group btn-group-sm">
+                                        <a class="btn btn-outline-secondary" href='{{urlfor "UserController.Create" "pid" $e.Id}}' data-toggle="tooltip" data-original-title="添加操作员">
+                                            <i class="fa fa-plus-circle"></i>
+                                        </a>
+                                        <a class="btn btn-outline-secondary" href='{{urlfor "UserController.Edit" "id" $e.Id}}' data-toggle="tooltip" data-original-title="编辑">
+                                            <i class="fa fa-pencil-alt"></i>
+                                        </a>
+                                        <a class="btn btn-outline-secondary ajax_delete" data-action='{{urlfor "UserController.Delete"}}' data-ids="{{$e.Id}}" href="javascript:void(0);" data-toggle="tooltip" data-original-title="删除">
+                                            <i class="fa fa-times"></i>
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                            {{end}}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- END Full Table -->
+    </div>
+    <!-- END Page Content -->
+</main>

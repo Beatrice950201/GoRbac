@@ -1,0 +1,41 @@
+<script src="/static/admin/js/plugins/bootstrap-notify/bootstrap-notify.min.js"></script>
+<script src="/static/admin/js/plugins/webuploader/webuploader.min.js"></script>
+<script>
+    $(document).ready(function() {
+        const uploader = WebUploader.create({
+            auto: true,
+            swf: '/static/admin/js/plugins/webuploader/Uploader.swf',
+            server: '{{urlfor "SignController.Uploader"}}',
+            pick: '.js-upload-image',
+            accept: {
+                title: 'Images',
+                extensions: 'gif,jpg,jpeg,png',
+                mimeTypes: 'image/*'
+            }
+        });
+        // 上传过程
+        uploader.on( 'uploadProgress', function( file, percentage ) {
+            One.loader('show');
+        });
+        // 上传成功
+        uploader.on( 'uploadSuccess', function( file,res ) {
+            One.loader('hide');
+            let type = "danger";
+            if(res && res.status === true){
+                $(".js-upload-image_bs").html('<img src='+"/" +res.data+'/><input type="hidden" name="avatar" value="'+res.data+'">');
+                type = "success";
+            }
+            One.helpers('notify', {align: 'center',type: type, icon: 'fa fa-check mr-1', message: res.message});
+        });
+        // 上传失败
+        uploader.on( 'uploadError', function() {
+            One.loader('hide');
+            One.helpers('notify', {align: 'center',type: "danger", icon: 'fa fa-check mr-1', message: "文件上传失败,请稍后再试.."});
+        });
+        $(".ajax_from").submit(function () {
+            let form_data = $(this).serialize();
+            app.post($(this).attr("action"),form_data);
+            return false
+        })
+    });
+</script>

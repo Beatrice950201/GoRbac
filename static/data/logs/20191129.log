@@ -1,0 +1,150 @@
+2019/11/29 10:23:29.178 [I] [parser.go:112]  generate router from comments
+2019/11/29 10:23:29.188 [I] [parser.go:112]  generate router from comments
+2019/11/29 10:23:29.195 [I] [parser.go:112]  generate router from comments
+2019/11/29 10:23:29.281 [I] [asm_amd64.s:1337]  http server Running on http://:8080
+2019/11/29 10:23:37.038 [I] [router.go:270]  D:\GO_PATH\src\github.com\beatrice950201\GoRbac\controllers\index no changed
+2019/11/29 10:23:37.039 [I] [router.go:270]  D:\GO_PATH\src\github.com\beatrice950201\GoRbac\controllers\admin no changed
+2019/11/29 10:23:37.041 [I] [router.go:270]  D:\GO_PATH\src\github.com\beatrice950201\GoRbac\controllers\admin\news no changed
+2019/11/29 10:23:40.391 [I] [router.go:270]  D:\GO_PATH\src\github.com\beatrice950201\GoRbac\controllers\index no changed
+2019/11/29 10:23:40.392 [I] [router.go:270]  D:\GO_PATH\src\github.com\beatrice950201\GoRbac\controllers\admin no changed
+2019/11/29 10:23:40.395 [I] [router.go:270]  D:\GO_PATH\src\github.com\beatrice950201\GoRbac\controllers\admin\news no changed
+2019/11/29 10:23:40.489 [I] [asm_amd64.s:1337]  http server Running on http://:8080
+2019/11/29 10:23:43.849 [I] [router.go:270]  D:\GO_PATH\src\github.com\beatrice950201\GoRbac\controllers\index no changed
+2019/11/29 10:23:43.850 [I] [router.go:270]  D:\GO_PATH\src\github.com\beatrice950201\GoRbac\controllers\admin no changed
+2019/11/29 10:23:43.852 [I] [router.go:270]  D:\GO_PATH\src\github.com\beatrice950201\GoRbac\controllers\admin\news no changed
+2019/11/29 10:23:43.930 [I] [asm_amd64.s:1337]  http server Running on http://:8080
+2019/11/29 10:24:29.931 [I] [router.go:270]  D:\GO_PATH\src\github.com\beatrice950201\GoRbac\controllers\index no changed
+2019/11/29 10:24:29.932 [I] [router.go:270]  D:\GO_PATH\src\github.com\beatrice950201\GoRbac\controllers\admin no changed
+2019/11/29 10:24:29.934 [I] [router.go:270]  D:\GO_PATH\src\github.com\beatrice950201\GoRbac\controllers\admin\news no changed
+2019/11/29 10:24:30.006 [I] [asm_amd64.s:1337]  http server Running on http://:8081
+2019/11/29 10:24:39.263 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|     3.9996ms|   match|[44m GET     [0m /     r:/
+2019/11/29 10:24:39.291 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|     2.9981ms|   match|[44m GET     [0m /static/admin/css/oneui.min.css
+2019/11/29 10:24:39.291 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|      999.4µs|   match|[44m GET     [0m /static/admin/js/oneui.app.min.js
+2019/11/29 10:24:39.291 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|     2.9981ms|   match|[44m GET     [0m /static/admin/js/oneui.core.min.js
+2019/11/29 10:24:39.756 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|           0s|   match|[44m GET     [0m /static/admin/media/favicons/favicon.png
+2019/11/29 10:24:47.316 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|     2.9983ms|   match|[44m GET     [0m /admin/sign/login   r:/admin/sign/login
+2019/11/29 10:24:47.334 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|           0s|   match|[44m GET     [0m /static/admin/css/appCore.css
+2019/11/29 10:24:47.336 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|           0s|   match|[44m GET     [0m /static/admin/js/plugins/sweet-alert/css/sweet-alert.css
+2019/11/29 10:24:47.339 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|           0s|   match|[44m GET     [0m /static/admin/js/core/jquery.min.js
+2019/11/29 10:24:47.341 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|      996.7µs|   match|[44m GET     [0m /static/admin/js/plugins/jquery-validation/jquery.validate.min.js
+2019/11/29 10:24:47.342 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|      999.9µs|   match|[44m GET     [0m /static/admin/js/app_core.js
+2019/11/29 10:24:47.344 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|     2.9985ms|   match|[44m GET     [0m /static/admin/js/plugins/sweet-alert/js/sweet-alert.min.js
+2019/11/29 10:24:47.346 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|     4.0087ms|   match|[44m GET     [0m /static/admin/js/pages/sign_login.js
+2019/11/29 10:24:47.422 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|           0s|   match|[44m GET     [0m /static/admin/fonts/fontawesome/fa-solid-900.woff2
+2019/11/29 10:24:53.214 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|   1.2233295s|   match|[44m GET     [0m /admin/index/index   r:/admin/index/index
+2019/11/29 10:24:53.234 [D] [server.go:2774]  |      127.0.0.1|[43m 404 [0m|     2.0166ms| nomatch|[44m GET     [0m /static/upload/20191112/20191112032031.jpg
+2019/11/29 10:24:53.297 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|           0s|   match|[44m GET     [0m /static/admin/fonts/simple-line-icons/Simple-Line-Icons.woff2
+2019/11/29 10:24:54.892 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|    18.9865ms|   match|[44m GET     [0m /admin/menu/index   r:/admin/menu/index
+2019/11/29 10:24:54.912 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|           0s|   match|[44m GET     [0m /static/admin/js/plugins/nestable/jquery.nestable.css
+2019/11/29 10:24:54.914 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|           0s|   match|[44m GET     [0m /static/admin/js/plugins/bootstrap-notify/bootstrap-notify.min.js
+2019/11/29 10:24:54.914 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|      999.6µs|   match|[44m GET     [0m /static/admin/js/plugins/nestable/jquery.nestable.js
+2019/11/29 10:24:54.917 [D] [server.go:2774]  |      127.0.0.1|[43m 404 [0m|     3.9961ms| nomatch|[44m GET     [0m /static/upload/20191112/20191112032031.jpg
+2019/11/29 10:24:55.753 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|    14.9918ms|   match|[44m GET     [0m /admin/role/index   r:/admin/role/index
+2019/11/29 10:24:55.777 [D] [server.go:2774]  |      127.0.0.1|[43m 404 [0m|     4.9971ms| nomatch|[44m GET     [0m /static/upload/20191112/20191112032031.jpg
+2019/11/29 10:24:56.407 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|    12.9932ms|   match|[44m GET     [0m /admin/user/index   r:/admin/user/index
+2019/11/29 10:24:56.423 [D] [server.go:2774]  |      127.0.0.1|[43m 404 [0m|     2.0005ms| nomatch|[44m GET     [0m /static/upload/20191112/20191112032031.jpg
+2019/11/29 10:24:56.969 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|    14.9911ms|   match|[44m GET     [0m /admin/role/index   r:/admin/role/index
+2019/11/29 10:24:56.990 [D] [server.go:2774]  |      127.0.0.1|[43m 404 [0m|     2.9983ms| nomatch|[44m GET     [0m /static/upload/20191112/20191112032031.jpg
+2019/11/29 10:24:57.491 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|     16.983ms|   match|[44m GET     [0m /admin/menu/index   r:/admin/menu/index
+2019/11/29 10:24:57.512 [D] [server.go:2774]  |      127.0.0.1|[43m 404 [0m|     2.9972ms| nomatch|[44m GET     [0m /static/upload/20191112/20191112032031.jpg
+2019/11/29 10:24:59.435 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|    17.9902ms|   match|[44m GET     [0m /admin/menu/index   r:/admin/menu/index
+2019/11/29 10:24:59.458 [D] [server.go:2774]  |      127.0.0.1|[43m 404 [0m|     3.9963ms| nomatch|[44m GET     [0m /static/upload/20191112/20191112032031.jpg
+2019/11/29 10:25:00.115 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|    15.9892ms|   match|[44m GET     [0m /admin/menu/index   r:/admin/menu/index
+2019/11/29 10:25:00.137 [D] [server.go:2774]  |      127.0.0.1|[43m 404 [0m|     2.9979ms| nomatch|[44m GET     [0m /static/upload/20191112/20191112032031.jpg
+2019/11/29 10:25:00.928 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|    15.0032ms|   match|[44m GET     [0m /admin/menu/index   r:/admin/menu/index
+2019/11/29 10:25:00.951 [D] [server.go:2774]  |      127.0.0.1|[43m 404 [0m|     2.0004ms| nomatch|[44m GET     [0m /static/upload/20191112/20191112032031.jpg
+2019/11/29 10:25:01.379 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|    18.0055ms|   match|[44m GET     [0m /admin/menu/index   r:/admin/menu/index
+2019/11/29 10:25:01.399 [D] [server.go:2774]  |      127.0.0.1|[43m 404 [0m|     2.0004ms| nomatch|[44m GET     [0m /static/upload/20191112/20191112032031.jpg
+2019/11/29 10:25:01.850 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|    14.9747ms|   match|[44m GET     [0m /admin/menu/index   r:/admin/menu/index
+2019/11/29 10:25:01.869 [D] [server.go:2774]  |      127.0.0.1|[43m 404 [0m|     2.9999ms| nomatch|[44m GET     [0m /static/upload/20191112/20191112032031.jpg
+2019/11/29 10:25:02.339 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|    17.9762ms|   match|[44m GET     [0m /admin/menu/index   r:/admin/menu/index
+2019/11/29 10:25:02.359 [D] [server.go:2774]  |      127.0.0.1|[43m 404 [0m|     2.0115ms| nomatch|[44m GET     [0m /static/upload/20191112/20191112032031.jpg
+2019/11/29 10:25:02.729 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|    15.0122ms|   match|[44m GET     [0m /admin/menu/index   r:/admin/menu/index
+2019/11/29 10:25:02.751 [D] [server.go:2774]  |      127.0.0.1|[43m 404 [0m|     2.0186ms| nomatch|[44m GET     [0m /static/upload/20191112/20191112032031.jpg
+2019/11/29 10:25:10.815 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|    13.9924ms|   match|[44m GET     [0m /admin/role/index   r:/admin/role/index
+2019/11/29 10:25:10.833 [D] [server.go:2774]  |      127.0.0.1|[43m 404 [0m|     2.9981ms| nomatch|[44m GET     [0m /static/upload/20191112/20191112032031.jpg
+2019/11/29 10:25:11.295 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|    12.9922ms|   match|[44m GET     [0m /admin/user/index   r:/admin/user/index
+2019/11/29 10:25:11.314 [D] [server.go:2774]  |      127.0.0.1|[43m 404 [0m|     2.9989ms| nomatch|[44m GET     [0m /static/upload/20191112/20191112032031.jpg
+2019/11/29 10:25:13.133 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|    1.053623s|   match|[44m GET     [0m /admin/index/index   r:/admin/index/index
+2019/11/29 10:25:13.151 [D] [server.go:2774]  |      127.0.0.1|[43m 404 [0m|     3.0003ms| nomatch|[44m GET     [0m /static/upload/20191112/20191112032031.jpg
+2019/11/29 10:26:37.994 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|   1.0510574s|   match|[44m GET     [0m /admin/index/index   r:/admin/index/index
+2019/11/29 10:26:38.011 [D] [server.go:2774]  |      127.0.0.1|[43m 404 [0m|     1.9971ms| nomatch|[44m GET     [0m /static/upload/20191120/20191120174431.jpg
+2019/11/29 10:26:38.061 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|           0s|   match|[44m GET     [0m /static/admin/media/favicons/favicon.png
+2019/11/29 10:26:40.190 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|    16.9895ms|   match|[44m GET     [0m /admin/menu/index   r:/admin/menu/index
+2019/11/29 10:26:40.213 [D] [server.go:2774]  |      127.0.0.1|[43m 404 [0m|     1.9971ms| nomatch|[44m GET     [0m /static/upload/20191120/20191120174431.jpg
+2019/11/29 10:26:42.250 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|    15.9607ms|   match|[44m GET     [0m /admin/role/index   r:/admin/role/index
+2019/11/29 10:26:42.270 [D] [server.go:2774]  |      127.0.0.1|[43m 404 [0m|     2.9982ms| nomatch|[44m GET     [0m /static/upload/20191120/20191120174431.jpg
+2019/11/29 10:26:42.774 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|    11.9933ms|   match|[44m GET     [0m /admin/user/index   r:/admin/user/index
+2019/11/29 10:26:42.794 [D] [server.go:2774]  |      127.0.0.1|[43m 404 [0m|          3ms| nomatch|[44m GET     [0m /static/upload/20191120/20191120174431.jpg
+2019/11/29 10:26:43.390 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|    12.9924ms|   match|[44m GET     [0m /admin/user/index   r:/admin/user/index
+2019/11/29 10:26:43.413 [D] [server.go:2774]  |      127.0.0.1|[43m 404 [0m|     2.9954ms| nomatch|[44m GET     [0m /static/upload/20191120/20191120174431.jpg
+2019/11/29 10:26:44.231 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|    12.9925ms|   match|[44m GET     [0m /admin/menu/index   r:/admin/menu/index
+2019/11/29 10:26:44.251 [D] [server.go:2774]  |      127.0.0.1|[43m 404 [0m|     1.9985ms| nomatch|[44m GET     [0m /static/upload/20191120/20191120174431.jpg
+2019/11/29 10:26:44.943 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|    12.0664ms|   match|[44m GET     [0m /admin/role/index   r:/admin/role/index
+2019/11/29 10:26:44.965 [D] [server.go:2774]  |      127.0.0.1|[43m 404 [0m|      3.997ms| nomatch|[44m GET     [0m /static/upload/20191120/20191120174431.jpg
+2019/11/29 10:26:45.518 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|    11.9945ms|   match|[44m GET     [0m /admin/user/index   r:/admin/user/index
+2019/11/29 10:26:45.537 [D] [server.go:2774]  |      127.0.0.1|[43m 404 [0m|     1.9995ms| nomatch|[44m GET     [0m /static/upload/20191120/20191120174431.jpg
+2019/11/29 10:26:47.696 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|    13.9921ms|   match|[44m GET     [0m /admin/role/index   r:/admin/role/index
+2019/11/29 10:26:47.715 [D] [server.go:2774]  |      127.0.0.1|[43m 404 [0m|      3.997ms| nomatch|[44m GET     [0m /static/upload/20191120/20191120174431.jpg
+2019/11/29 10:26:48.093 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|    10.9942ms|   match|[44m GET     [0m /admin/menu/index   r:/admin/menu/index
+2019/11/29 10:26:48.117 [D] [server.go:2774]  |      127.0.0.1|[43m 404 [0m|     3.0119ms| nomatch|[44m GET     [0m /static/upload/20191120/20191120174431.jpg
+2019/11/29 10:26:49.953 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|   1.0443557s|   match|[44m GET     [0m /admin/index/index   r:/admin/index/index
+2019/11/29 10:26:49.971 [D] [server.go:2774]  |      127.0.0.1|[43m 404 [0m|     2.9952ms| nomatch|[44m GET     [0m /static/upload/20191120/20191120174431.jpg
+2019/11/29 10:26:51.527 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|    13.9929ms|   match|[44m GET     [0m /admin/user/profile   r:/admin/user/profile
+2019/11/29 10:26:51.547 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|           0s|   match|[44m GET     [0m /static/admin/js/plugins/webuploader/webuploader.css
+2019/11/29 10:26:51.549 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|      999.2µs|   match|[44m GET     [0m /static/admin/js/plugins/webuploader/webuploader.min.js
+2019/11/29 10:26:51.552 [D] [server.go:2774]  |      127.0.0.1|[43m 404 [0m|      3.997ms| nomatch|[44m GET     [0m /static/upload/20191120/20191120174431.jpg
+2019/11/29 10:26:53.323 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|    18.0031ms|   match|[44m GET     [0m /admin/news/document/index   r:/admin/news/document/index
+2019/11/29 10:26:53.342 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|      998.4µs|   match|[44m GET     [0m /static/admin/js/plugins/bootstrap-paginator/bootstrap-paginator.min.js
+2019/11/29 10:26:53.343 [D] [server.go:2774]  |      127.0.0.1|[43m 404 [0m|     1.9977ms| nomatch|[44m GET     [0m /static/upload/20191120/20191120174431.jpg
+2019/11/29 10:26:54.229 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|    11.9927ms|   match|[44m GET     [0m /admin/news/cate/index   r:/admin/news/cate/index
+2019/11/29 10:26:54.250 [D] [server.go:2774]  |      127.0.0.1|[43m 404 [0m|     3.0002ms| nomatch|[44m GET     [0m /static/upload/20191120/20191120174431.jpg
+2019/11/29 10:26:55.322 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|    16.0011ms|   match|[44m GET     [0m /admin/news/document/index   r:/admin/news/document/index
+2019/11/29 10:26:55.338 [D] [server.go:2774]  |      127.0.0.1|[43m 404 [0m|     1.9988ms| nomatch|[44m GET     [0m /static/upload/20191120/20191120174431.jpg
+2019/11/29 10:26:57.630 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|    12.9938ms|   match|[44m GET     [0m /admin/news/cate/index   r:/admin/news/cate/index
+2019/11/29 10:26:57.650 [D] [server.go:2774]  |      127.0.0.1|[43m 404 [0m|     1.9976ms| nomatch|[44m GET     [0m /static/upload/20191120/20191120174431.jpg
+2019/11/29 10:26:58.931 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|    15.9914ms|   match|[44m GET     [0m /admin/news/document/index   r:/admin/news/document/index
+2019/11/29 10:26:58.953 [D] [server.go:2774]  |      127.0.0.1|[43m 404 [0m|     3.9985ms| nomatch|[44m GET     [0m /static/upload/20191120/20191120174431.jpg
+2019/11/29 10:27:01.349 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|     11.993ms|   match|[44m GET     [0m /admin/user/profile   r:/admin/user/profile
+2019/11/29 10:27:01.371 [D] [server.go:2774]  |      127.0.0.1|[43m 404 [0m|          3ms| nomatch|[44m GET     [0m /static/upload/20191120/20191120174431.jpg
+2019/11/29 10:27:19.759 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|           0s|   match|[44m GET     [0m /static/upload/20191129/20191129102719.png/
+2019/11/29 10:27:22.747 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|    13.9917ms|   match|[44m GET     [0m /admin/user/profile   r:/admin/user/profile
+2019/11/29 10:27:22.767 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|           0s|   match|[44m GET     [0m /static/upload/20191129/20191129102719.png
+2019/11/29 10:27:26.944 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|    13.0052ms|   match|[44m GET     [0m /admin/menu/index   r:/admin/menu/index
+2019/11/29 10:27:26.966 [D] [server.go:2774]  |      127.0.0.1|[47m 304 [0m|      998.7µs|   match|[44m GET     [0m /static/upload/20191129/20191129102719.png
+2019/11/29 10:27:28.008 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|    14.9886ms|   match|[44m GET     [0m /admin/role/index   r:/admin/role/index
+2019/11/29 10:27:28.028 [D] [server.go:2774]  |      127.0.0.1|[47m 304 [0m|      997.1µs|   match|[44m GET     [0m /static/upload/20191129/20191129102719.png
+2019/11/29 10:27:28.774 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|    11.9854ms|   match|[44m GET     [0m /admin/user/index   r:/admin/user/index
+2019/11/29 10:27:30.090 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|    15.9908ms|   match|[44m GET     [0m /admin/role/index   r:/admin/role/index
+2019/11/29 10:27:30.108 [D] [server.go:2774]  |      127.0.0.1|[47m 304 [0m|           0s|   match|[44m GET     [0m /static/upload/20191129/20191129102719.png
+2019/11/29 10:28:12.583 [I] [router.go:270]  D:\GO_PATH\src\github.com\beatrice950201\GoRbac\controllers\index no changed
+2019/11/29 10:28:12.584 [I] [router.go:270]  D:\GO_PATH\src\github.com\beatrice950201\GoRbac\controllers\admin no changed
+2019/11/29 10:28:12.586 [I] [router.go:270]  D:\GO_PATH\src\github.com\beatrice950201\GoRbac\controllers\admin\news no changed
+2019/11/29 10:28:12.660 [I] [asm_amd64.s:1337]  http server Running on http://:8081
+2019/11/29 10:28:16.857 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|    20.9867ms|   match|[44m GET     [0m /admin/role/index   r:/admin/role/index
+2019/11/29 10:28:16.873 [D] [server.go:2774]  |      127.0.0.1|[47m 304 [0m|           0s|   match|[44m GET     [0m /static/upload/20191129/20191129102719.png
+2019/11/29 10:28:16.984 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|           0s|   match|[44m GET     [0m /static/admin/media/favicons/favicon.png
+2019/11/29 10:28:18.076 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|    19.9867ms|   match|[44m GET     [0m /admin/role/index   r:/admin/role/index
+2019/11/29 10:28:18.190 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|           0s|   match|[44m GET     [0m /static/admin/media/favicons/favicon.png
+2019/11/29 10:28:18.865 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|    15.9883ms|   match|[44m GET     [0m /admin/menu/index   r:/admin/menu/index
+2019/11/29 10:28:19.426 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|    16.9895ms|   match|[44m GET     [0m /admin/role/index   r:/admin/role/index
+2019/11/29 10:28:19.982 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|    13.0099ms|   match|[44m GET     [0m /admin/user/index   r:/admin/user/index
+2019/11/29 10:28:20.494 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|    12.9779ms|   match|[44m GET     [0m /admin/role/index   r:/admin/role/index
+2019/11/29 10:28:21.758 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|    12.9903ms|   match|[44m GET     [0m /admin/user/index   r:/admin/user/index
+2019/11/29 10:28:21.776 [D] [server.go:2774]  |      127.0.0.1|[47m 304 [0m|           0s|   match|[44m GET     [0m /static/upload/20191129/20191129102719.png
+2019/11/29 10:28:22.891 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|    17.9893ms|   match|[44m GET     [0m /admin/menu/index   r:/admin/menu/index
+2019/11/29 10:28:25.089 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|   1.0604133s|   match|[44m GET     [0m /admin/index/index   r:/admin/index/index
+2019/11/29 10:28:27.909 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|    11.9935ms|   match|[44m GET     [0m /admin/user/profile   r:/admin/user/profile
+2019/11/29 10:28:27.931 [D] [server.go:2774]  |      127.0.0.1|[47m 304 [0m|           0s|   match|[44m GET     [0m /static/upload/20191129/20191129102719.png
+2019/11/29 10:28:29.308 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|    14.9908ms|   match|[44m GET     [0m /admin/menu/index   r:/admin/menu/index
+2019/11/29 10:29:26.266 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|    15.9748ms|   match|[44m GET     [0m /admin/menu/index   r:/admin/menu/index
+2019/11/29 10:29:26.287 [D] [server.go:2774]  |      127.0.0.1|[47m 304 [0m|           0s|   match|[44m GET     [0m /static/upload/20191129/20191129102719.png
+2019/11/29 10:29:29.157 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|    11.9931ms|   match|[44m GET     [0m /admin/menu/index   r:/admin/menu/index
+2019/11/29 10:29:32.428 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|    12.0378ms|   match|[44m GET     [0m /admin/role/index   r:/admin/role/index
+2019/11/29 10:30:03.288 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|    15.9915ms|   match|[44m GET     [0m /admin/role/edit   r:/admin/role/edit
+2019/11/29 10:30:03.305 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|           0s|   match|[44m GET     [0m /static/admin/js/plugins/jstree/themes/default/style.min.css
+2019/11/29 10:30:03.306 [D] [server.go:2774]  |      127.0.0.1|[47m 304 [0m|           0s|   match|[44m GET     [0m /static/upload/20191129/20191129102719.png
+2019/11/29 10:30:03.308 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|     1.0024ms|   match|[44m GET     [0m /static/admin/js/plugins/jstree/jstree.min.js
+2019/11/29 10:30:04.715 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|      982.3µs|   match|[44m GET     [0m /static/admin/js/plugins/jstree/themes/default/32px.png
+2019/11/29 10:30:25.067 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|     10.992ms|   match|[44m GET     [0m /admin/user/index   r:/admin/user/index
+2019/11/29 10:30:25.084 [D] [server.go:2774]  |      127.0.0.1|[47m 304 [0m|           0s|   match|[44m GET     [0m /static/upload/20191129/20191129102719.png

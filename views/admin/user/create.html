@@ -1,0 +1,98 @@
+<main id="main-container">
+    <!-- Hero -->
+    {{template "admin/common/breadcrumb.html" .}}
+    <!-- END Hero -->
+    <!-- Page Content -->
+    <div class="content font-size-sm" style="max-width: initial;">
+        <!-- Full Table -->
+        <div class="block">
+            <div class="block-header bg-gray-lighter">
+                <h3 class="block-title">添加用户</h3>
+                <div class="block-options">
+                    <button type="button" class="btn-block-option" data-toggle="block-option" data-action="fullscreen_toggle">
+                        <i class="si si-size-fullscreen"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="block-content">
+                <form class="row ajax_from" action='{{urlfor "UserController.Create"}}' method="post">
+                    <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <label class="col-xs-12">用户名/公司账号</label>
+                        <div class="col-xs-12">
+                            <input class="form-control" type="text" name="username" value="" placeholder="用户名/公司账号"/>
+                            <div class="help-block">必填，可由英文字母、数字组成</div>
+                        </div>
+                    </div>
+                    <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <label class="col-xs-12">用户昵称/公司名称</label>
+                        <div class="col-xs-12">
+                            <input class="form-control" type="text" name="nickname" value="" placeholder="用户昵称/公司名称"/>
+                            <div class="help-block">必填，可以是中文</div>
+                        </div>
+                    </div>
+                    <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <label class="col-xs-12">所属角色</label>
+                        <div class="col-xs-12">
+                            <select class="form-control" name="role">
+                                {{range $i, $e := .group}}
+                                <option value="{{$e.Id}}">{{str2html $e.Name}}</option>
+                                {{end}}
+                            </select>
+                            <div class="help-block">非超级管理员，禁止创建与当前角色同级的用户</div>
+                        </div>
+                    </div>
+{{/*                    <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">*/}}
+{{/*                        <label class="col-xs-12">用户邮箱/公司邮箱</label>*/}}
+{{/*                        <div class="col-xs-12">*/}}
+{{/*                            <input class="form-control" type="email" name="email" value="" placeholder="用户邮箱/公司邮箱"/>*/}}
+{{/*                        </div>*/}}
+{{/*                    </div>*/}}
+                    <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <label class="col-xs-12">登陆密码</label>
+                        <div class="col-xs-12">
+                            <input class="form-control" type="password" name="password" value="" placeholder="登陆密码"/>
+                        </div>
+                    </div>
+{{/*                    <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">*/}}
+{{/*                        <label class="col-xs-12">联系电话</label>*/}}
+{{/*                        <div class="col-xs-12">*/}}
+{{/*                            <input class="form-control" type="text" name="mobile" value="" placeholder="联系电话"/>*/}}
+{{/*                        </div>*/}}
+{{/*                    </div>*/}}
+{{/*                    <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">*/}}
+{{/*                        <label class="col-xs-12">用户头像/公司LOGO</label>*/}}
+{{/*                        <div class="col-xs-12">*/}}
+{{/*                            <button type="button" style="padding: 0;" class="btn btn-primary js-upload-image">*/}}
+{{/*                                <i class="fa fa-fw fa-upload mr-1"></i> 选择文件*/}}
+{{/*                            </button>*/}}
+{{/*                            <div class="js-upload-image_bs"></div>*/}}
+{{/*                            <div class="help-block">请选择上传的文件,支持格式：.jpg，png</div>*/}}
+{{/*                        </div>*/}}
+{{/*                    </div>*/}}
+                    <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <label class="col-xs-12">账户状态</label>
+                        <div class="col-xs-12">
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" class="custom-control-input" value="0" id="status_0" name="status">
+                                <label class="custom-control-label" for="status_0">禁用</label>
+                            </div>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" class="custom-control-input" value="1" id="status_1" name="status" checked>
+                                <label class="custom-control-label" for="status_1">启用</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group col-md-12 col-xs-12">
+                        <div class="col-xs-12 align-text-center">
+                            <input type="hidden" name="pid" value="{{$.pid}}">
+                            <button class="btn btn-info" type="submit">提交</button>
+                            <button class="btn btn-secondary" type="button" onclick="javascript:history.back(-1);return false;">返回</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- END Full Table -->
+    </div>
+    <!-- END Page Content -->
+</main>
