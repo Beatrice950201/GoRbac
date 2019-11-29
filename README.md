@@ -7,6 +7,10 @@
 
 # git clone https://github.com/Beatrice950201/GoRbac.git
 
+# 导入数据库
+
+# 修改数据库配置
+
 # 其他一切流程请参考Beego框架
 
 ```
